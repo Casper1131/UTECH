@@ -1,0 +1,567 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>UTech, Jamaica | University of Technology</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #ffffff;
+            color: #1a2c3e;
+            overflow-x: hidden;
+        }
+        :root {
+            --utech-primary: #0b5e4f;
+            --utech-light: #e8f3f0;
+            --utech-accent: #f4a261;
+            --utech-warm: #fff8f0;
+            --utech-gray: #f8f9fa;
+            --utech-text: #2c3e2f;
+        }
+        .bg-utech-light {
+            background-color: var(--utech-light);
+        }
+        .btn-primary-utech {
+            background-color: var(--utech-primary);
+            color: white;
+            font-weight: 600;
+            padding: 12px 32px;
+            border-radius: 50px;
+            transition: all 0.3s ease;
+            border: none;
+        }
+        .btn-primary-utech:hover {
+            background-color: #0a4e42;
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(11, 94, 79, 0.2);
+        }
+        .btn-outline-utech {
+            border: 2px solid var(--utech-primary);
+            background: transparent;
+            color: var(--utech-primary);
+            border-radius: 50px;
+            font-weight: 600;
+            padding: 10px 28px;
+            transition: 0.3s;
+        }
+        .btn-outline-utech:hover {
+            background: var(--utech-primary);
+            color: white;
+            transform: translateY(-2px);
+        }
+        .section-title {
+            font-size: 2.5rem;
+            font-weight: 800;
+            letter-spacing: -0.02em;
+            color: var(--utech-primary);
+            margin-bottom: 1rem;
+        }
+        .section-sub {
+            font-size: 1.1rem;
+            color: #5a6e5c;
+            max-width: 700px;
+            margin: 0 auto 2rem auto;
+        }
+        .card-campus {
+            border: none;
+            border-radius: 24px;
+            background: white;
+            box-shadow: 0 12px 28px rgba(0, 0, 0, 0.05);
+            transition: all 0.25s ease;
+            height: 100%;
+            overflow: hidden;
+        }
+        .card-campus:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 30px -12px rgba(11, 94, 79, 0.15);
+        }
+        .stat-card {
+            background: white;
+            border-radius: 28px;
+            padding: 1.8rem 1rem;
+            text-align: center;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.03);
+            border: 1px solid #e0ece8;
+        }
+        .navbar-utech {
+            background: rgba(255, 255, 255, 0.98);
+            backdrop-filter: blur(0px);
+            box-shadow: 0 2px 20px rgba(0, 0, 0, 0.03);
+            padding: 0.9rem 0;
+        }
+        .nav-link {
+            font-weight: 500;
+            color: #2c3e2f;
+            margin: 0 6px;
+            transition: 0.2s;
+        }
+        .nav-link:hover {
+            color: var(--utech-primary);
+        }
+        .hero-section {
+            background: linear-gradient(135deg, #f0faf7 0%, #ffffff 100%);
+            padding-top: 7rem;
+            padding-bottom: 4rem;
+        }
+        .badge-utech-school {
+            background-color: #e8f3f0;
+            color: #0b5e4f;
+            font-weight: 600;
+            padding: 6px 14px;
+            border-radius: 100px;
+            font-size: 0.8rem;
+        }
+        .counter-number {
+            font-size: 2.5rem;
+            font-weight: 800;
+            color: var(--utech-primary);
+        }
+        .footer-utech {
+            background: #0a3b33;
+            color: #d4ece6;
+        }
+        .icon-circle {
+            background: #e8f3f0;
+            width: 64px;
+            height: 64px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 20px;
+            font-size: 28px;
+            color: #0b5e4f;
+            margin-bottom: 1.2rem;
+        }
+        .event-item {
+            border-left: 3px solid var(--utech-accent);
+            padding-left: 1rem;
+            margin-bottom: 1.5rem;
+        }
+        @media (max-width: 768px) {
+            .section-title { font-size: 1.9rem; }
+            .hero-title { font-size: 2rem; }
+        }
+    </style>
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-utech fixed-top">
+    <div class="container">
+        <a class="navbar-brand fw-bold fs-3" href="#" style="color: #0b5e4f;">
+            <i class="fas fa-university me-2" style="color: #f4a261;"></i>UTech, Jamaica
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="mainNav">
+            <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+                <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+                <li class="nav-item"><a class="nav-link" href="#academics">Academics</a></li>
+                <li class="nav-item"><a class="nav-link" href="#admissions">Admissions</a></li>
+                <li class="nav-item"><a class="nav-link" href="#campus">Campus Life</a></li>
+                <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+            </ul>
+            <a href="#" class="btn btn-primary-utech"><i class="fas fa-graduation-cap me-1"></i> Apply Now</a>
+        </div>
+    </div>
+</nav>
+
+<section id="home" class="hero-section">
+    <div class="container">
+        <div class="row align-items-center g-5">
+            <div class="col-lg-6">
+                <span class="badge-utech-school mb-3 d-inline-block"><i class="fas fa-chalkboard-user me-1"></i> Jamaica's Leading Technological University</span>
+                <h1 class="display-4 fw-bold mb-4" style="color: #0b5e4f;">Shape Your Future <br>at <span style="color: #f4a261;">UTech, Jamaica</span></h1>
+                <p class="lead mb-4 text-secondary">For over 65 years, the University of Technology, Jamaica has been empowering students with world-class education, hands-on experience, and a vibrant community. Discover your path to success.</p>
+                <div class="d-flex gap-3 flex-wrap">
+                    <a href="#" class="btn btn-primary-utech">Explore Programs <i class="fas fa-arrow-right ms-2"></i></a>
+                    <a href="#" class="btn btn-outline-utech">Campus Tour <i class="fas fa-video ms-2"></i></a>
+                </div>
+            </div>
+            <div class="col-lg-6 text-center">
+                <img src="https://placehold.co/600x450/e8f3f0/0b5e4f?text=UTech+Campus+Life" class="img-fluid rounded-4 shadow" alt="UTech Students">
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Stats Section - School achievements -->
+<section class="container my-5 py-4">
+    <div class="row g-4 text-center">
+        <div class="col-md-3 col-6">
+            <div class="stat-card">
+                <div class="counter-number" id="statStudents">0</div>
+                <p class="fw-semibold mb-0">Students Enrolled</p>
+                <small class="text-muted">diverse & growing</small>
+            </div>
+        </div>
+        <div class="col-md-3 col-6">
+            <div class="stat-card">
+                <div class="counter-number" id="statPrograms">0</div>
+                <p class="fw-semibold mb-0">Academic Programs</p>
+                <small class="text-muted">undergrad & graduate</small>
+            </div>
+        </div>
+        <div class="col-md-3 col-6">
+            <div class="stat-card">
+                <div class="counter-number" id="statFaculty">0</div>
+                <p class="fw-semibold mb-0">Expert Faculty</p>
+                <small class="text-muted">dedicated educators</small>
+            </div>
+        </div>
+        <div class="col-md-3 col-6">
+            <div class="stat-card">
+                <div class="counter-number" id="statAlumni">0</div>
+                <p class="fw-semibold mb-0">Global Alumni</p>
+                <small class="text-muted">worldwide impact</small>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- About Section - School heritage -->
+<section id="about" class="bg-utech-light py-5">
+    <div class="container py-4">
+        <div class="row align-items-center">
+            <div class="col-lg-6 mb-4 mb-lg-0">
+                <span class="badge-utech-school mb-3">Our Legacy</span>
+                <h2 class="section-title">Excellence in <br>Education & Innovation</h2>
+                <p class="text-secondary">UTech was established in 1958 as the Jamaica Institute of Technology, later gaining university status. Today, we are the Caribbean's premier technological university, producing graduates who lead in engineering, business, health sciences, and the creative industries.</p>
+                <p class="text-secondary mt-3">Our mission: to advance knowledge, foster innovation, and serve our community through teaching, research, and service.</p>
+                <div class="mt-4">
+                    <a href="#" class="btn btn-outline-utech">Learn More About UTech <i class="fas fa-chevron-right ms-2"></i></a>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="row g-3">
+                    <div class="col-sm-6"><div class="card-campus p-4 text-center"><div class="icon-circle"><i class="fas fa-flask"></i></div><h5>Research Excellence</h5><p class="small">Leading research in sustainable development & tech</p></div></div>
+                    <div class="col-sm-6"><div class="card-campus p-4 text-center"><div class="icon-circle"><i class="fas fa-handshake"></i></div><h5>Industry Partnerships</h5><p class="small">Strong connections with local & global employers</p></div></div>
+                    <div class="col-sm-6"><div class="card-campus p-4 text-center"><div class="icon-circle"><i class="fas fa-globe-americas"></i></div><h5>Global Community</h5><p class="small">Students from 40+ countries worldwide</p></div></div>
+                    <div class="col-sm-6"><div class="card-campus p-4 text-center"><div class="icon-circle"><i class="fas fa-trophy"></i></div><h5>Accredited Quality</h5><p class="small">Recognized by international accrediting bodies</p></div></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="academics" class="py-5">
+    <div class="container">
+        <div class="text-center mb-5">
+            <span class="badge-utech-school">Academic Excellence</span>
+            <h2 class="section-title">Our Faculties & Schools</h2>
+            <p class="section-sub">Explore our wide range of accredited programs across 6 faculties and numerous research centers.</p>
+        </div>
+        <div class="row g-4">
+            <div class="col-md-6 col-lg-4">
+                <div class="card-campus p-4">
+                    <i class="fas fa-microchip fa-2x mb-3" style="color: #f4a261;"></i>
+                    <h4>Faculty of Engineering & Computing</h4>
+                    <p class="small text-secondary">Civil, Electrical, Mechanical, Software Engineering, Computer Science, and Information Technology.</p>
+                    <a href="#" class="text-decoration-none fw-semibold" style="color:#0b5e4f;">Explore →</a>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4">
+                <div class="card-campus p-4">
+                    <i class="fas fa-chart-line fa-2x mb-3" style="color: #f4a261;"></i>
+                    <h4>Faculty of Business & Management</h4>
+                    <p class="small text-secondary">Accounting, Finance, Marketing, International Business, Entrepreneurship, and Management.</p>
+                    <a href="#" class="text-decoration-none fw-semibold" style="color:#0b5e4f;">Explore →</a>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4">
+                <div class="card-campus p-4">
+                    <i class="fas fa-heartbeat fa-2x mb-3" style="color: #f4a261;"></i>
+                    <h4>Faculty of Health Sciences</h4>
+                    <p class="small text-secondary">Nursing, Public Health, Pharmacy, Medical Technology, and Rehabilitation Sciences.</p>
+                    <a href="#" class="text-decoration-none fw-semibold" style="color:#0b5e4f;">Explore →</a>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4">
+                <div class="card-campus p-4">
+                    <i class="fas fa-leaf fa-2x mb-3" style="color: #f4a261;"></i>
+                    <h4>Faculty of Science & Sport</h4>
+                    <p class="small text-secondary">Biology, Chemistry, Environmental Science, Sports Science, and Physical Education.</p>
+                    <a href="#" class="text-decoration-none fw-semibold" style="color:#0b5e4f;">Explore →</a>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4">
+                <div class="card-campus p-4">
+                    <i class="fas fa-palette fa-2x mb-3" style="color: #f4a261;"></i>
+                    <h4>Faculty of Education & Humanities</h4>
+                    <p class="small text-secondary">Teacher Education, Language Studies, Communication, and Social Sciences.</p>
+                    <a href="#" class="text-decoration-none fw-semibold" style="color:#0b5e4f;">Explore →</a>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4">
+                <div class="card-campus p-4">
+                    <i class="fas fa-building fa-2x mb-3" style="color: #f4a261;"></i>
+                    <h4>Faculty of The Built Environment</h4>
+                    <p class="small text-secondary">Architecture, Construction Management, Urban Planning, and Quantity Surveying.</p>
+                    <a href="#" class="text-decoration-none fw-semibold" style="color:#0b5e4f;">Explore →</a>
+                </div>
+            </div>
+        </div>
+        <div class="text-center mt-5">
+            <a href="#" class="btn btn-primary-utech">View All Programs <i class="fas fa-arrow-right ms-2"></i></a>
+        </div>
+    </div>
+</section>
+
+<section id="admissions" class="bg-utech-light py-5">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-5 mb-4 mb-lg-0">
+                <span class="badge-utech-school">Join UTech</span>
+                <h2 class="section-title">Your Journey <br>Starts Here</h2>
+                <p>We welcome students from Jamaica, the Caribbean, and around the world. Our admissions team is here to guide you through every step.</p>
+                <div class="mt-4">
+                    <div class="d-flex mb-3"><i class="fas fa-check-circle me-3 mt-1" style="color:#0b5e4f;"></i><div><strong>Undergraduate Admissions</strong><br><span class="small">Freshman, transfer, and visiting students</span></div></div>
+                    <div class="d-flex mb-3"><i class="fas fa-check-circle me-3 mt-1" style="color:#0b5e4f;"></i><div><strong>Graduate Admissions</strong><br><span class="small">Master's, Doctoral, and professional programs</span></div></div>
+                    <div class="d-flex mb-3"><i class="fas fa-check-circle me-3 mt-1" style="color:#0b5e4f;"></i><div><strong>International Students</strong><br><span class="small">Visa support and global community</span></div></div>
+                </div>
+                <a href="#" class="btn btn-primary-utech mt-3">Application Deadlines <i class="fas fa-calendar ms-2"></i></a>
+            </div>
+            <div class="col-lg-7">
+                <div class="card-campus p-4">
+                    <h4><i class="fas fa-graduation-cap me-2" style="color:#f4a261;"></i>Request Information</h4>
+                    <form id="admissionsForm">
+                        <div class="row g-3 mt-2">
+                            <div class="col-md-6"><input type="text" class="form-control form-control-lg" placeholder="Full Name" required></div>
+                            <div class="col-md-6"><input type="email" class="form-control form-control-lg" placeholder="Email Address" required></div>
+                            <div class="col-12"><select class="form-select form-select-lg"><option>Select Program of Interest</option><option>Engineering & Computing</option><option>Business & Management</option><option>Health Sciences</option></select></div>
+                            <div class="col-12"><textarea rows="3" class="form-control" placeholder="Questions?"></textarea></div>
+                            <div class="col-12"><button type="submit" class="btn btn-primary-utech w-100">Send Request <i class="fas fa-paper-plane ms-2"></i></button></div>
+                        </div>
+                    </form>
+                    <div id="formMsgAdmissions" class="mt-3 small text-success"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Campus Life Section - Student experience -->
+<section id="campus" class="py-5">
+    <div class="container">
+        <div class="text-center mb-5">
+            <span class="badge-utech-school">Life at UTech</span>
+            <h2 class="section-title">Vibrant Campus Experience</h2>
+            <p class="section-sub">Beyond the classroom — clubs, sports, cultural events, and a supportive community.</p>
+        </div>
+        <div class="row g-4">
+            <div class="col-md-4">
+                <div class="card-campus p-4 text-center">
+                    <i class="fas fa-futbol fa-3x mb-3" style="color:#f4a261;"></i>
+                    <h5>Sports & Recreation</h5>
+                    <p class="small">Football, basketball, track & field, swimming, and state-of-the-art fitness facilities.</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card-campus p-4 text-center">
+                    <i class="fas fa-music fa-3x mb-3" style="color:#f4a261;"></i>
+                    <h5>Arts & Culture</h5>
+                    <p class="small">Campus festivals, dance ensembles, choir, drama productions, and art exhibitions.</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card-campus p-4 text-center">
+                    <i class="fas fa-users fa-3x mb-3" style="color:#f4a261;"></i>
+                    <h5>Student Clubs</h5>
+                    <p class="small">Over 50 clubs — from robotics to debate, volunteering to entrepreneurship.</p>
+                </div>
+            </div>
+        </div>
+        <div class="row mt-4 g-4">
+            <div class="col-md-6">
+                <div class="card-campus p-4">
+                    <h5><i class="fas fa-calendar-alt me-2" style="color:#f4a261;"></i> Upcoming Events</h5>
+                    <div class="event-item mt-3"><strong>Orientation Week 2025</strong><br><span class="small text-secondary">August 25-29, 2025</span></div>
+                    <div class="event-item"><strong>Career Fair & Expo</strong><br><span class="small text-secondary">October 15, 2025</span></div>
+                    <div class="event-item"><strong>Research Day 2025</strong><br><span class="small text-secondary">November 20, 2025</span></div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="card-campus p-4">
+                    <h5><i class="fas fa-dorm me-2" style="color:#f4a261;"></i> Campus Resources</h5>
+                    <ul class="list-unstyled mt-3">
+                        <li class="mb-2"><i class="fas fa-book me-2" style="color:#0b5e4f;"></i> Modern Library & Digital Resources</li>
+                        <li class="mb-2"><i class="fas fa-laptop me-2" style="color:#0b5e4f;"></i> 24/7 Computer Labs & Wi-Fi</li>
+                        <li class="mb-2"><i class="fas fa-heartbeat me-2" style="color:#0b5e4f;"></i> Health & Wellness Center</li>
+                        <li class="mb-2"><i class="fas fa-hotel me-2" style="color:#0b5e4f;"></i> On-Campus Housing Options</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="bg-utech-light py-5">
+    <div class="container">
+        <div class="text-center mb-5">
+            <span class="badge-utech-school">Student Stories</span>
+            <h2 class="section-title">What Our Students Say</h2>
+        </div>
+        <div class="row g-4">
+            <div class="col-md-4">
+                <div class="card-campus p-4 text-center">
+                    <i class="fas fa-quote-left fa-2x mb-3" style="color:#f4a261;"></i>
+                    <p>"UTech gave me the practical skills and confidence to excel in engineering. The faculty are supportive and the labs are top-notch."</p>
+                    <h6 class="mt-3 mb-0">— Kevin Brown</h6>
+                    <small>BSc. Mechanical Engineering, 2023</small>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card-campus p-4 text-center">
+                    <i class="fas fa-quote-left fa-2x mb-3" style="color:#f4a261;"></i>
+                    <p>"The business program connected me with industry leaders. I landed a great job even before graduation!"</p>
+                    <h6 class="mt-3 mb-0">— Samantha Lee</h6>
+                    <small>BSc. International Business, 2024</small>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card-campus p-4 text-center">
+                    <i class="fas fa-quote-left fa-2x mb-3" style="color:#f4a261;"></i>
+                    <p>"As an international student, I felt welcomed from day one. UTech is truly a global family."</p>
+                    <h6 class="mt-3 mb-0">— Maria Garcia</h6>
+                    <small>MSc. Computer Science, 2024</small>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Contact & Visit -->
+<section id="contact" class="py-5">
+    <div class="container">
+        <div class="row g-5">
+            <div class="col-lg-5">
+                <span class="badge-utech-school">Get in Touch</span>
+                <h2 class="section-title">Visit Us</h2>
+                <p>We invite you to explore our campus, meet our faculty, and experience UTech firsthand.</p>
+                <div class="mt-4">
+                    <div class="d-flex mb-3"><i class="fas fa-map-marker-alt fa-lg me-3 mt-1" style="color:#f4a261;"></i><div><strong>Main Campus</strong><br>237 Old Hope Road, Kingston 6, Jamaica</div></div>
+                    <div class="d-flex mb-3"><i class="fas fa-phone-alt fa-lg me-3 mt-1" style="color:#f4a261;"></i><div><strong>Admissions Office</strong><br>+1 (876) 927-1680</div></div>
+                    <div class="d-flex mb-3"><i class="fas fa-envelope fa-lg me-3 mt-1" style="color:#f4a261;"></i><div><strong>Email</strong><br>admissions@utech.edu.jm</div></div>
+                </div>
+                <div class="mt-4">
+                    <a href="#" class="btn btn-outline-utech"><i class="fas fa-calendar-check me-2"></i> Schedule a Campus Tour</a>
+                </div>
+            </div>
+            <div class="col-lg-7">
+                <div class="card-campus p-4">
+                    <h4>Send Us a Message</h4>
+                    <form id="contactForm">
+                        <div class="row g-3 mt-2">
+                            <div class="col-md-6"><input type="text" class="form-control form-control-lg" placeholder="Full Name" required></div>
+                            <div class="col-md-6"><input type="email" class="form-control form-control-lg" placeholder="Email" required></div>
+                            <div class="col-12"><input type="text" class="form-control form-control-lg" placeholder="Subject"></div>
+                            <div class="col-12"><textarea rows="4" class="form-control" placeholder="Your Message"></textarea></div>
+                            <div class="col-12"><button type="submit" class="btn btn-primary-utech">Send Message <i class="fas fa-paper-plane ms-2"></i></button></div>
+                        </div>
+                    </form>
+                    <div id="contactFormMsg" class="mt-3 small text-success"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer class="footer-utech pt-5 pb-4 mt-4">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4 mb-4">
+                <h5 class="fw-bold text-white"><i class="fas fa-university me-2"></i>UTech, Jamaica</h5>
+                <p class="small opacity-75">The University of Technology, Jamaica — empowering minds, transforming futures since 1958.</p>
+            </div>
+            <div class="col-md-2 mb-4">
+                <h6 class="fw-semibold">Quick Links</h6>
+                <ul class="list-unstyled small">
+                    <li>Undergraduate Programs</li>
+                    <li>Graduate Studies</li>
+                    <li>Academic Calendar</li>
+                    <li>Library</li>
+                </ul>
+            </div>
+            <div class="col-md-3 mb-4">
+                <h6 class="fw-semibold">Resources</h6>
+                <ul class="list-unstyled small">
+                    <li>Student Portal</li>
+                    <li>Faculty & Staff</li>
+                    <li>Alumni Association</li>
+                    <li>Career Services</li>
+                </ul>
+            </div>
+            <div class="col-md-3 mb-4">
+                <h6 class="fw-semibold">Connect With Us</h6>
+                <div class="d-flex gap-3 fs-5 mb-3">
+                    <i class="fab fa-facebook"></i>
+                    <i class="fab fa-twitter"></i>
+                    <i class="fab fa-instagram"></i>
+                    <i class="fab fa-linkedin-in"></i>
+                    <i class="fab fa-youtube"></i>
+                </div>
+                <p class="small">© 2025 University of Technology, Jamaica. All rights reserved.</p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<script>
+    $(document).ready(function(){
+        function animateNumber(id, start, end, duration) {
+            let range = end - start;
+            let current = start;
+            let stepTime = Math.abs(Math.floor(duration / range));
+            let timer = setInterval(() => {
+                current += (end > start ? 1 : -1);
+                $(id).text(current);
+                if (current == end) clearInterval(timer);
+            }, stepTime);
+        }
+        let counted = false;
+        $(window).on('scroll', function(){
+            let scrollTop = $(window).scrollTop();
+            let statsTop = $('.stat-card').first().offset().top - 500;
+            if (scrollTop > statsTop && !counted) {
+                counted = true;
+                animateNumber('#statStudents', 0, 12480, 2000);
+                animateNumber('#statPrograms', 0, 86, 1500);
+                animateNumber('#statFaculty', 0, 550, 1600);
+                animateNumber('#statAlumni', 0, 45000, 2500);
+            }
+        });
+        setTimeout(() => { $(window).trigger('scroll'); }, 300);
+        
+        $('#contactForm, #admissionsForm').on('submit', function(e){
+            e.preventDefault();
+            let msgDiv = $(this).parent().find('.text-success');
+            msgDiv.html('<i class="fas fa-check-circle"></i> Thank you! A UTech representative will contact you soon.');
+            $(this)[0].reset();
+            setTimeout(() => msgDiv.fadeOut(2000), 4000);
+        });
+        
+        $('.nav-link').on('click', function(event){
+            if (this.hash !== "") {
+                event.preventDefault();
+                let hash = this.hash;
+                $('html, body').animate({ scrollTop: $(hash).offset().top - 80 }, 700);
+            }
+        });
+    });
+</script>
+</body>
+</html>

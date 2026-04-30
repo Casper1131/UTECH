@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>UTech, Jamaica | Centre of Innovation & Technology</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #ffffff;
+            color: #1a2c3e;
+            scroll-behavior: smooth;
+        }
+
+        :root {
+            --utech-deep: #0b2b26;
+            --utech-forest: #124a3f;
+            --uwi-navy: #002d5a;
+            --uwi-blue: #004a7c;
+            --accent-gold: #e6b422;
+            --accent-gold-dark: #c49d0c;
+            --light-bg: #f5f9ff;
+            --card-shadow: 0 20px 35px -12px rgba(0, 0, 0, 0.05);
+            --hover-shadow: 0 28px 40px -18px rgba(0, 45, 90, 0.12);
+        }
+
+        /* Gradient hero blend (UWI navy + UTech green) */
+        .hero-blend {
+            background: linear-gradient(115deg, #f0f6fa 0%, #ffffff 70%);
+            position: relative;
+        }
+
+        .btn-primary-custom {
+            background: linear-gradient(95deg, var(--utech-deep) 0%, var(--uwi-navy) 100%);
+            color: white;
+            font-weight: 600;
+            padding: 12px 32px;
+            border-radius: 48px;
+            transition: all 0.3s ease;
+            border: none;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+        }
+        .btn-primary-custom:hover {
+            background: linear-gradient(95deg, var(--utech-forest) 0%, var(--uwi-blue) 100%);
+            transform: translateY(-3px);
+            box-shadow: 0 12px 22px -10px rgba(0,45,90,0.3);
+            color: white;
+        }
+
+        .btn-gold {
+            background: var(--accent-gold);
+            color: #0b2b26;
+            font-weight: 700;
+            padding: 12px 32px;
+            border-radius: 48px;
+            transition: 0.25s;
+            border: none;
+        }
+        .btn-gold:hover {
+            background: #f3c82e;
+            transform: translateY(-3px);
+            color: #001e3b;
+            box-shadow: 0 10px 20px -8px rgba(0,0,0,0.2);
+        }
+
+        .btn-outline-fusion {
+            border: 2px solid var(--accent-gold);
+            background: transparent;
+            color: var(--accent-gold-dark);
+            border-radius: 48px;
+            font-weight: 600;
+            padding: 10px 28px;
+            transition: 0.3s;
+        }
+        .btn-outline-fusion:hover {
+            background: var(--accent-gold);
+            color: #0b2b26;
+            transform: translateY(-2px);
+        }
+
+        .section-title {
+            font-size: 2.5rem;
+            font-weight: 800;
+            letter-spacing: -0.02em;
+            margin-bottom: 1.2rem;
+            background: linear-gradient(135deg, #0b2b26 0%, #002d5a 100%);
+            background-clip: text;
+            -webkit-background-clip: text;
+            color: transparent;
+        }
+        .section-sub {
+            font-size: 1.1rem;
+            color: #4a5b6e;
+            max-width: 700px;
+            margin: 0 auto 2rem auto;
+        }
+
+        .card-modern {
+            border: none;
+            border-radius: 28px;
+            background: #ffffff;
+            box-shadow: var(--card-shadow);
+            transition: all 0.25s ease;
+            height: 100%;
+        }
+        .card-modern:hover {
+            transform: translateY(-6px);
+            box-shadow: var(--hover-shadow);
+        }
+
+        .stat-card {
+            background: #f8fafd;
+            border-radius: 32px;
+            padding: 1.8rem 1rem;
+            text-align: center;
+            border: 1px solid #eef2f8;
+            transition: all 0.2s;
+        }
+        .stat-card:hover {
+            background: white;
+            border-color: var(--accent-gold);
+        }
+
+        .navbar-custom {
+            backdrop-filter: blur(14px);
+            background: rgba(255,255,255,0.96);
+            box-shadow: 0 2px 20px rgba(0,0,0,0.02);
+            padding: 0.9rem 0;
+        }
+
+        .badge-fusion {
+            background-color: rgba(230, 180, 34, 0.15);
+            color: #b87d0c;
+            font-weight: 600;
+            padding: 6px 14px;
+            border-radius: 100px;
+            font-size: 0.8rem;
+            backdrop-filter: blur(2px);
+        }
+
+        .icon-fusion {
+            background: linear-gradient(145deg, #eef3fc, #ffffff);
+            width: 64px;
+            height: 64px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 20px;
+            font-size: 28px;
+            color: var(--utech-deep);
+            margin-bottom: 1.2rem;
+            box-shadow: 0 8px 14px -8px rgba(0,0,0,0.05);
+        }
+
+        .progress-custom {
+            height: 8px;
+            border-radius: 12px;
+            background-color: #e2e8f0;
+        }
+        .progress-bar-fusion {
+            background: linear-gradient(90deg, var(--accent-gold), #f5b81b);
+            border-radius: 12px;
+        }
+
+        .counter-number {
+            font-size: 2.6rem;
+            font-weight: 800;
+            background: linear-gradient(135deg, #0b2b26, #002d5a);
+            background-clip: text;
+            -webkit-background-clip: text;
+            color: transparent;
+        }
+
+        .footer-fusion {
+            background: linear-gradient(100deg, #0b1f1c 0%, #001b38 100%);
+            color: #d4dfe9;
+        }
+
+        .nav-link {
+            font-weight: 500;
+            color: #1e2f3e;
+            margin: 0 6px;
+        }
+        .nav-link:hover {
+            color: var(--accent-gold);
+        }
+
+        @media (max-width: 768px) {
+            .section-title { font-size: 1.9rem; }
+            .hero-title { font-size: 2rem; }
+        }
+    </style>
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-custom fixed-top">
+    <div class="container">
+        <a class="navbar-brand fw-bold fs-3" href="#" style="color: #0b2b26;">
+            <i class="fas fa-microchip me-2" style="color: #e6b422;"></i>UTech, JA
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="mainNav">
+            <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+                <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+                <li class="nav-item"><a class="nav-link" href="#academics">Academics</a></li>
+                <li class="nav-item"><a class="nav-link" href="#programs">Programs</a></li>
+                <li class="nav-item"><a class="nav-link" href="#innovation">Innovation Hub</a></li>
+                <li class="nav-item"><a class="nav-link" href="#contact">Connect</a></li>
+            </ul>
+            <a href="#" class="btn btn-outline-fusion"><i class="fas fa-user-graduate me-1"></i> Apply Now</a>
+        </div>
+    </div>
+</nav>
+
+<section id="home" class="hero-blend pt-5 mt-5">
+    <div class="container py-5">
+        <div class="row align-items-center g-5">
+            <div class="col-lg-6">
+                <span class="badge-fusion mb-3 d-inline-block"><i class="fas fa-flask me-1"></i> Technology • Innovation • Excellence</span>
+                <h1 class="display-4 fw-bold hero-title mb-4" style="color: #0b2b26;">Build smarter systems <br>with <span style="color: #e6b422;">UTech, Jamaica</span></h1>
+                <p class="lead mb-4 text-secondary">The University of Technology, Jamaica — where engineering, digital transformation, and research create real-world impact. Ranked among the Caribbean's leading tech institutions.</p>
+                <div class="d-flex gap-3 flex-wrap">
+                    <a href="#" class="btn btn-gold">Explore Programs <i class="fas fa-arrow-right ms-2"></i></a>
+                    <a href="#" class="btn btn-primary-custom">Virtual Campus Tour <i class="fas fa-vr-cardboard ms-2"></i></a>
+                </div>
+            </div>
+            <div class="col-lg-6 text-center">
+                <img src="https://placehold.co/650x450/edf2f9/0b2b26?text=UTech+Innovation+Hub" class="img-fluid rounded-4 shadow-lg" alt="UTech Campus">
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="container my-5 py-3">
+    <div class="row g-4 text-center">
+        <div class="col-md-3 col-6"><div class="stat-card"><div class="counter-number" id="statStudents">0</div><p class="fw-semibold mb-0">+ Students Enrolled</p><small class="text-muted">tech & business leaders</small></div></div>
+        <div class="col-md-3 col-6"><div class="stat-card"><div class="counter-number" id="statPrograms">0</div><p class="fw-semibold mb-0">Academic Programs</p><small class="text-muted">STEM & beyond</small></div></div>
+        <div class="col-md-3 col-6"><div class="stat-card"><div class="counter-number" id="statIndustry">0</div><p class="fw-semibold mb-0">Industry Partners</p><small class="text-muted">global & regional</small></div></div>
+        <div class="col-md-3 col-6"><div class="stat-card"><div class="counter-number" id="statResearch">0</div><p class="fw-semibold mb-0">Active Research Labs</p><small class="text-muted">applied innovation</small></div></div>
+    </div>
+</section>
+
+<!-- About + Performance KPIs: mashup of UWI academic tone + IT Source progress bars -->
+<section id="about" class="container my-5 py-4">
+    <div class="row align-items-center">
+        <div class="col-lg-6 mb-4 mb-lg-0">
+            <span class="badge-fusion"><i class="fas fa-chalkboard-user"></i> ABOUT UTech</span>
+            <h2 class="section-title mt-2">Jamaica’s premier technological university<br> driving digital evolution</h2>
+            <p class="text-secondary">UTech focuses on applied research, workforce readiness, and tech entrepreneurship. With roots since 1958, we produce graduates who lead digital transformation across the Caribbean and beyond.</p>
+            <div class="mt-4">
+                <div class="mb-3"><div class="d-flex justify-content-between"><span>Digital transformation readiness</span><span>96%</span></div><div class="progress progress-custom mt-1"><div class="progress-bar progress-bar-fusion" style="width:96%"></div></div></div>
+                <div class="mb-3"><div class="d-flex justify-content-between"><span>Graduate employability (STEM)</span><span>93%</span></div><div class="progress progress-custom mt-1"><div class="progress-bar progress-bar-fusion" style="width:93%"></div></div></div>
+                <div class="mb-3"><div class="d-flex justify-content-between"><span>Research partnerships growth</span><span>+42%</span></div><div class="progress progress-custom mt-1"><div class="progress-bar progress-bar-fusion" style="width:88%"></div></div></div>
+            </div>
+        </div>
+        <div class="col-lg-6">
+            <div class="row g-3">
+                <div class="col-sm-6"><div class="card-modern p-4 text-center"><div class="icon-fusion"><i class="fas fa-laptop-code"></i></div><h5>Digital Innovation Lab</h5><p class="small">AI, IoT & smart systems prototyping</p></div></div>
+                <div class="col-sm-6"><div class="card-modern p-4 text-center"><div class="icon-fusion"><i class="fas fa-chalkboard"></i></div><h5>Engineering Hub</h5><p class="small">Robotics, mechatronics & renewable energy</p></div></div>
+                <div class="col-sm-6"><div class="card-modern p-4 text-center"><div class="icon-fusion"><i class="fas fa-chart-line"></i></div><h5>Business Analytics</h5><p class="small">Data science & strategic intelligence</p></div></div>
+                <div class="col-sm-6"><div class="card-modern p-4 text-center"><div class="icon-fusion"><i class="fas fa-microchip"></i></div><h5>Semiconductor Research</h5><p class="small">Caribbean's first IC design center</p></div></div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="academics" class="bg-light py-5">
+    <div class="container py-4">
+        <div class="text-center">
+            <span class="badge-fusion">ACADEMIC EXCELLENCE</span>
+            <h2 class="section-title">Cutting-edge faculties for the digital economy</h2>
+            <p class="section-sub">From engineering to health sciences, UTech delivers future-proof skills in high-demand sectors. <br> Blend of UWI academic depth + tech acceleration.</p>
+        </div>
+        <div class="row g-4 mt-2">
+            <div class="col-md-6 col-lg-4"><div class="card-modern p-4"><div class="icon-fusion"><i class="fas fa-microchip"></i></div><h4>Faculty of Engineering & Computing</h4><p>Software engineering, cybersecurity, network infrastructure, AI — accredited industry-ready degrees.</p></div></div>
+            <div class="col-md-6 col-lg-4"><div class="card-modern p-4"><div class="icon-fusion"><i class="fas fa-chart-simple"></i></div><h4>Faculty of Business & Management</h4><p>Digital marketing, fintech, entrepreneurship & supply chain analytics.</p></div></div>
+            <div class="col-md-6 col-lg-4"><div class="card-modern p-4"><div class="icon-fusion"><i class="fas fa-heartbeat"></i></div><h4>College of Health Sciences</h4><p>Nursing, public health, pharmaceutical innovation — bridging tech and healthcare.</p></div></div>
+            <div class="col-md-6 col-lg-4"><div class="card-modern p-4"><div class="icon-fusion"><i class="fas fa-leaf"></i></div><h4>Built Environment & Architecture</h4><p>Sustainable design, green building tech, and urban planning.</p></div></div>
+            <div class="col-md-6 col-lg-4"><div class="card-modern p-4"><div class="icon-fusion"><i class="fas fa-database"></i></div><h4>Data Science Institute</h4><p>Big data, AI governance, and research analytics for industry transformation.</p></div></div>
+            <div class="col-md-6 col-lg-4"><div class="card-modern p-4"><div class="icon-fusion"><i class="fas fa-chalkboard"></i></div><h4>Education & Leadership</h4><p>Tech pedagogy and education innovation for the new generation.</p></div></div>
+        </div>
+    </div>
+</section>
+
+<!-- Featured Programs & Innovation Pipeline (inspired by IT Source projects + UWI Featured Projects) -->
+<section id="programs" class="container my-5 py-4">
+    <div class="text-center mb-4">
+        <span class="badge-fusion"><i class="fas fa-rocket"></i> FLAGSHIP PROGRAMS</span>
+        <h2 class="section-title">Launch your career with UTech’s industry-aligned degrees</h2>
+        <p class="section-sub">Bachelor’s, Master’s, and professional certifications designed for the global digital economy.</p>
+    </div>
+    <div class="row g-4">
+        <div class="col-md-4"><div class="card-modern p-4 h-100"><i class="fas fa-shield-alt fa-2x mb-3" style="color:#e6b422"></i><h4>BSc. Cybersecurity</h4><p>Network defense, ethical hacking, digital forensics — hands-on labs & industry certifications.</p><a href="#" class="text-decoration-none fw-semibold mt-2 d-inline-block">Explore →</a></div></div>
+        <div class="col-md-4"><div class="card-modern p-4 h-100"><i class="fas fa-brain fa-2x mb-3" style="color:#e6b422"></i><h4>BSc. Artificial Intelligence</h4><p>Machine learning, computer vision, NLP — Caribbean’s first AI specialization.</p><a href="#" class="text-decoration-none fw-semibold mt-2 d-inline-block">Explore →</a></div></div>
+        <div class="col-md-4"><div class="card-modern p-4 h-100"><i class="fas fa-charging-station fa-2x mb-3" style="color:#e6b422"></i><h4>MSc. Renewable Energy & Smart Grids</h4><p>Green tech engineering, policy and sustainable infrastructure.</p><a href="#" class="text-decoration-none fw-semibold mt-2 d-inline-block">Explore →</a></div></div>
+    </div>
+    <div class="text-center mt-5"><a href="#" class="btn btn-primary-custom">View All Programs <i class="fas fa-arrow-right ms-2"></i></a></div>
+</section>
+
+<section id="innovation" class="bg-light py-5">
+    <div class="container">
+        <div class="text-center mb-5">
+            <span class="badge-fusion"><i class="fas fa-flask"></i> RESEARCH & INNOVATION</span>
+            <h2 class="section-title">Solutions that transform industries</h2>
+            <p class="section-sub">Explore UTech-led projects that combine academic rigor with real-world application.</p>
+        </div>
+        <div class="row g-4">
+            <div class="col-md-4"><div class="card-modern p-4 h-100"><i class="fas fa-tractor fa-2x mb-3" style="color:#e6b422"></i><h5>Smart Agriculture Platform</h5><p>IoT-driven soil sensors & predictive analytics for Jamaican farmers. Real-time dashboards.</p><span class="badge-fusion mt-2">Active Grant</span></div></div>
+            <div class="col-md-4"><div class="card-modern p-4 h-100"><i class="fas fa-truck-fast fa-2x mb-3" style="color:#e6b422"></i><h5>Caribbean Logistics Dashboard</h5><p>Route optimization, customs integration. Driving supply chain efficiency.</p><span class="badge-fusion mt-2">Industry Partner</span></div></div>
+            <div class="col-md-4"><div class="card-modern p-4 h-100"><i class="fas fa-school fa-2x mb-3" style="color:#e6b422"></i><h5>EdTech Learning Ecosystem</h5><p>Adaptive LMS for regional schools, analytics & inclusive design.</p><span class="badge-fusion mt-2">Gov Collaboration</span></div></div>
+        </div>
+    </div>
+</section>
+
+<section class="container my-5">
+    <div class="bg-uwi-primary text-white py-5 rounded-4 px-4" style="background: linear-gradient(125deg, #0b2b26, #002d5a);">
+        <div class="container text-center py-4">
+            <h2 class="display-5 fw-semibold">Shape the digital future of the Caribbean</h2>
+            <p class="lead mt-2 mb-4">Join UTech’s innovation ecosystem — apply for Fall 2025 and access cutting-edge labs, global partners, and career-ready programs.</p>
+            <div class="d-flex gap-3 justify-content-center flex-wrap">
+                <a href="#" class="btn btn-gold btn-lg px-5"><i class="fas fa-pen-alt me-2"></i> Apply Now</a>
+                <a href="#" class="btn btn-outline-light btn-lg">Request Info <i class="fas fa-download ms-2"></i></a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Contact Section + Academic Resources (UWI handbook/calendar element + modern form) -->
+<section id="contact" class="container py-5">
+    <div class="row g-5">
+        <div class="col-lg-5">
+            <span class="badge-fusion"><i class="fas fa-address-card"></i> CONNECT WITH US</span>
+            <h2 class="section-title mt-2">Let’s shape your <span style="color:#e6b422;">tech journey</span></h2>
+            <p>Our admissions team is ready to guide you through the application process, scholarship opportunities, and program details.</p>
+            <div class="mt-4">
+                <div class="d-flex mb-3"><i class="fas fa-map-marker-alt fa-lg me-3" style="color:#e6b422; width:28px"></i> 237 Old Hope Road, Kingston 6, Jamaica</div>
+                <div class="d-flex mb-3"><i class="fas fa-phone-alt fa-lg me-3" style="color:#e6b422; width:28px"></i> +1 (876) 927-1680</div>
+                <div class="d-flex mb-3"><i class="fas fa-envelope fa-lg me-3" style="color:#e6b422; width:28px"></i> admissions@utech.edu.jm</div>
+            </div>
+            <hr class="my-4">
+            <div><i class="fas fa-calendar-alt me-2" style="color:#e6b422"></i> <strong>Academic Calendar 2025</strong> &nbsp;|&nbsp; <a href="#" class="text-decoration-none">Faculty Handbooks 📘</a></div>
+        </div>
+        <div class="col-lg-7">
+            <div class="card-modern p-4 shadow">
+                <h4><i class="fas fa-comment-dots me-2" style="color:#e6b422"></i> Send an enquiry</h4>
+                <form id="contactFormUTech">
+                    <div class="row g-3">
+                        <div class="col-md-6"><input type="text" class="form-control form-control-lg" placeholder="Full name" required></div>
+                        <div class="col-md-6"><input type="email" class="form-control form-control-lg" placeholder="Email address" required></div>
+                        <div class="col-12"><input type="text" class="form-control form-control-lg" placeholder="Program of interest (e.g., BSc. Cybersecurity)"></div>
+                        <div class="col-12"><textarea rows="4" class="form-control" placeholder="Tell us about your ambitions..."></textarea></div>
+                        <div class="col-12"><button type="submit" class="btn btn-gold px-5">Send Message <i class="fas fa-paper-plane ms-2"></i></button></div>
+                    </div>
+                </form>
+                <div id="formMsg" class="mt-3 small text-success"></div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<footer class="footer-fusion pt-5 pb-4 mt-4">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4 mb-4"><h5 class="fw-bold text-white"><i class="fas fa-microchip me-2"></i>UTech, Jamaica</h5><p class="small opacity-75">The University of Technology combines academic excellence, research innovation, and industry collaboration to fuel Caribbean progress.</p></div>
+            <div class="col-md-2 mb-4"><h6 class="fw-semibold">Explore</h6><ul class="list-unstyled small"><li>Admissions</li><li>Scholarships</li><li>Faculties</li><li>Research Centers</li></ul></div>
+            <div class="col-md-3 mb-4"><h6 class="fw-semibold">Resources</h6><ul class="list-unstyled small"><li>e-Learning Portal</li><li>Library</li><li>Innovation Lab</li><li>Career Services</li></ul></div>
+            <div class="col-md-3 mb-4"><h6 class="fw-semibold">Connect</h6><div class="d-flex gap-3 fs-5"><i class="fab fa-facebook"></i><i class="fab fa-twitter"></i><i class="fab fa-linkedin-in"></i><i class="fab fa-instagram"></i><i class="fab fa-youtube"></i></div><p class="mt-3 small">© 2025 University of Technology, Jamaica. All rights reserved.</p></div>
+        </div>
+    </div>
+</footer>
+
+<script>
+    $(document).ready(function(){
+        function animateNumber(id, start, end, duration){
+            let range = end - start;
+            let current = start;
+            let stepTime = Math.abs(Math.floor(duration / range));
+            let timer = setInterval(() => {
+                current += (end > start ? 1 : -1);
+                $(id).text(current);
+                if (current == end) clearInterval(timer);
+            }, stepTime);
+        }
+
+        let counted = false;
+        $(window).on('scroll', function(){
+            let scrollTop = $(window).scrollTop();
+            let statsTop = $('.stat-card').first().offset().top - 500;
+            if (scrollTop > statsTop && !counted){
+                counted = true;
+                animateNumber('#statStudents', 0, 11480, 1800);
+                animateNumber('#statPrograms', 0, 72, 1500);
+                animateNumber('#statIndustry', 0, 158, 1500);
+                animateNumber('#statResearch', 0, 24, 1300);
+            }
+        });
+        setTimeout(() => { $(window).trigger('scroll'); }, 200);
+
+        $('#contactFormUTech').on('submit', function(e){
+            e.preventDefault();
+            $('#formMsg').html('<i class="fas fa-check-circle"></i> Thank you! A UTech advisor will contact you within 24h.');
+            $(this)[0].reset();
+            setTimeout(() => $('#formMsg').fadeOut(2500), 3500);
+        });
+
+        $('.nav-link, .btn-gold[href="#"]').on('click', function(event){
+            if (this.hash !== "") {
+                event.preventDefault();
+                let hash = this.hash;
+                $('html, body').animate({ scrollTop: $(hash).offset().top - 80 }, 700);
+            }
+        });
+    });
+</script>
+</body>
+</html>
