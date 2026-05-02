@@ -1,3 +1,8 @@
+Gervaise Campbell
+Kemoya Falconer
+Ricardo Hood
+Christopher Thomas
+
 # UTech, Jamaica Website Redesign – Design System & Prototypes
 
 ## Project Overview
