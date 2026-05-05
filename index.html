@@ -1,17 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
     <title>UTech, Jamaica | Centre of Excellence</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,600;14..32,700;14..32,800&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,600;14..32,700;14..32,800&display=swap"
+        rel="stylesheet">
     <style>
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
+
         body {
             font-family: 'Inter', sans-serif;
             background-color: #ffffff;
@@ -20,200 +24,262 @@
             line-height: 1.5;
             overflow-x: hidden;
         }
+
         a {
             color: inherit;
         }
+
         img {
             display: block;
             max-width: 100%;
         }
+
         .container {
             width: min(100% - 2rem, 1140px);
             margin-inline: auto;
         }
+
         .row {
             display: flex;
             flex-wrap: wrap;
             margin-inline: -0.75rem;
         }
-        .row > * {
+
+        .row>* {
             width: 100%;
             padding-inline: 0.75rem;
         }
+
         .g-0 {
             margin-inline: 0;
         }
-        .g-0 > * {
+
+        .g-0>* {
             padding-inline: 0;
         }
+
         .g-3 {
             row-gap: 1rem;
         }
+
         .g-4 {
             row-gap: 1.5rem;
         }
+
         .g-5 {
             row-gap: 3rem;
         }
+
         .align-items-center {
             align-items: center;
         }
+
         .justify-content-between {
             justify-content: space-between;
         }
+
         .text-center {
             text-align: center;
         }
+
         .text-white {
             color: #fff;
         }
+
         .text-secondary {
             color: #667085;
         }
+
         .text-muted {
             color: #7b8794;
         }
+
         .text-success {
             color: #198754;
         }
+
         .text-decoration-none {
             text-decoration: none;
         }
+
         .bg-light {
             background: #f8fafc;
         }
+
         .bg-white {
             background: #fff;
         }
+
         .bg-dark {
             background: #212529;
             color: #fff;
         }
+
         .bg-secondary {
             background: #6c757d;
             color: #fff;
         }
+
         .small {
             font-size: 0.875rem;
         }
+
         .lead {
             font-size: 1.25rem;
             font-weight: 400;
         }
+
         .display-4 {
             font-size: clamp(2.4rem, 5vw, 3.5rem);
             line-height: 1.12;
         }
+
         .display-5 {
             font-size: clamp(2rem, 4vw, 3rem);
             line-height: 1.18;
         }
+
         .fw-bold {
             font-weight: 700;
         }
+
         .fw-semibold {
             font-weight: 600;
         }
+
         .fs-3 {
             font-size: 1.75rem;
         }
+
         .fs-5 {
             font-size: 1.25rem;
         }
+
         .opacity-75 {
             opacity: 0.75;
         }
+
         .d-flex {
             display: flex;
         }
+
         .d-inline-block {
             display: inline-block;
         }
+
         .flex-wrap {
             flex-wrap: wrap;
         }
+
         .gap-3 {
             gap: 1rem;
         }
+
         .my-4 {
             margin-block: 1.5rem;
         }
+
         .my-5 {
             margin-block: 3rem;
         }
+
         .mt-1 {
             margin-top: 0.25rem;
         }
+
         .mt-2 {
             margin-top: 0.5rem;
         }
+
         .mt-3 {
             margin-top: 1rem;
         }
+
         .mt-4 {
             margin-top: 1.5rem;
         }
+
         .mt-5 {
             margin-top: 3rem;
         }
+
         .mb-0 {
             margin-bottom: 0;
         }
+
         .mb-2 {
             margin-bottom: 0.5rem;
         }
+
         .mb-3 {
             margin-bottom: 1rem;
         }
+
         .mb-4 {
             margin-bottom: 1.5rem;
         }
+
         .mb-5 {
             margin-bottom: 3rem;
         }
+
         .me-1 {
             margin-right: 0.25rem;
         }
+
         .me-2 {
             margin-right: 0.5rem;
         }
+
         .me-3 {
             margin-right: 1rem;
         }
+
         .ms-1 {
             margin-left: 0.25rem;
         }
+
         .ms-2 {
             margin-left: 0.5rem;
         }
+
         .mx-3 {
             margin-inline: 1rem;
         }
+
         .mx-auto {
             margin-inline: auto;
         }
+
         .p-4 {
             padding: 1.5rem;
         }
+
         .px-5 {
             padding-inline: 3rem;
         }
+
         .py-4 {
             padding-block: 1.5rem;
         }
+
         .py-5 {
             padding-block: 3rem;
         }
+
         .pt-5 {
             padding-top: 3rem;
         }
+
         .pb-4 {
             padding-bottom: 1.5rem;
         }
+
         .list-unstyled {
             list-style: none;
             padding-left: 0;
         }
+
         .fixed-top {
             position: fixed;
             top: 0;
@@ -221,21 +287,25 @@
             left: 0;
             z-index: 1000;
         }
-        .navbar > .container {
+
+        .navbar>.container {
             display: flex;
             align-items: center;
             gap: 1.5rem;
         }
+
         .navbar-brand {
             text-decoration: none;
             white-space: nowrap;
         }
+
         .navbar-collapse {
             display: flex;
             align-items: center;
             flex: 1;
             gap: 1.5rem;
         }
+
         .navbar-nav {
             display: flex;
             align-items: center;
@@ -243,6 +313,7 @@
             padding-left: 0;
             margin-bottom: 0;
         }
+
         .navbar-toggler {
             display: none;
             margin-left: auto;
@@ -254,6 +325,7 @@
             cursor: pointer;
             position: relative;
         }
+
         .navbar-toggler-icon,
         .navbar-toggler-icon::before,
         .navbar-toggler-icon::after {
@@ -264,17 +336,21 @@
             background: #0b2b26;
             content: "";
         }
+
         .navbar-toggler-icon {
             top: 19px;
         }
+
         .navbar-toggler-icon::before {
             top: -7px;
             left: 0;
         }
+
         .navbar-toggler-icon::after {
             top: 7px;
             left: 0;
         }
+
         .btn {
             display: inline-flex;
             align-items: center;
@@ -283,10 +359,12 @@
             cursor: pointer;
             font: inherit;
         }
+
         .btn-lg {
             font-size: 1.15rem;
             padding-block: 0.9rem;
         }
+
         .btn-outline-secondary {
             border: 1px solid #8792a0;
             background: transparent;
@@ -295,30 +373,38 @@
             padding: 11px 24px;
             transition: 0.3s;
         }
+
         .btn-outline-secondary:hover {
             background: #4a5565;
             color: #fff;
             transform: translateY(-2px);
         }
+
         .img-fluid {
             width: 100%;
             height: auto;
         }
+
         .rounded-3 {
             border-radius: 0.75rem;
         }
+
         .rounded-4 {
             border-radius: 1rem;
         }
+
         .rounded-pill {
             border-radius: 999px;
         }
+
         .shadow-sm {
             box-shadow: 0 0.125rem 0.5rem rgba(0, 0, 0, 0.08);
         }
+
         .shadow-lg {
             box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.14);
         }
+
         .form-control {
             width: 100%;
             border: 1px solid #d7e0df;
@@ -329,14 +415,17 @@
             background: #fff;
             transition: border-color 0.2s, box-shadow 0.2s;
         }
+
         .form-control:focus {
             border-color: #124a3f;
             box-shadow: 0 0 0 4px rgba(18, 74, 63, 0.12);
             outline: none;
         }
+
         .form-control-lg {
             min-height: 48px;
         }
+
         .badge {
             display: inline-block;
             padding: 0.4em 0.65em;
@@ -344,9 +433,11 @@
             font-size: 0.75rem;
             font-weight: 600;
         }
+
         .bg-utech-primary {
             background: linear-gradient(135deg, #0b2b26 0%, #124a3f 100%);
         }
+
         .btn-utech {
             background: #e6b422;
             color: #0b2b26;
@@ -356,12 +447,14 @@
             transition: all 0.3s ease;
             border: none;
         }
+
         .btn-utech:hover {
             background: #f3c82e;
             transform: translateY(-3px);
-            box-shadow: 0 15px 25px -12px rgba(0,0,0,0.2);
+            box-shadow: 0 15px 25px -12px rgba(0, 0, 0, 0.2);
             color: #0b2b26;
         }
+
         .btn-outline-utech {
             border: 2px solid #e6b422;
             background: transparent;
@@ -371,23 +464,27 @@
             padding: 10px 24px;
             transition: 0.3s;
         }
+
         .btn-outline-utech:hover {
             background: #e6b422;
             color: #0b2b26;
             transform: translateY(-2px);
         }
+
         .section-title {
             font-size: 2.5rem;
             font-weight: 800;
             letter-spacing: -0.02em;
             margin-bottom: 1rem;
         }
+
         .section-sub {
             font-size: 1.1rem;
             color: #4a5b6e;
             max-width: 700px;
             margin: 0 auto 2rem auto;
         }
+
         .card-modern {
             border: none;
             border-radius: 28px;
@@ -396,10 +493,12 @@
             transition: all 0.25s ease;
             height: 100%;
         }
+
         .card-modern:hover {
             transform: translateY(-6px);
             box-shadow: 0 28px 40px -18px rgba(0, 0, 0, 0.12);
         }
+
         .stat-card {
             background: #f8fafc;
             border-radius: 32px;
@@ -407,30 +506,36 @@
             text-align: center;
             border: 1px solid #eef2f6;
         }
+
         .navbar-custom {
             backdrop-filter: blur(12px);
-            background: rgba(255,255,255,0.96);
-            box-shadow: 0 2px 20px rgba(0,0,0,0.02);
+            background: rgba(255, 255, 255, 0.96);
+            box-shadow: 0 2px 20px rgba(0, 0, 0, 0.02);
             padding: 1rem 0;
         }
+
         .hero-gradient {
             background: linear-gradient(110deg, #f5f7fa 0%, #ffffff 100%);
         }
+
         .footer {
             background: #0a1c1a;
             color: #cddfdb;
         }
+
         .progress-custom {
             height: 8px;
             border-radius: 10px;
             background-color: #e2e8f0;
             overflow: hidden;
         }
+
         .progress-bar-custom {
             background-color: #e6b422;
             border-radius: 10px;
             height: 100%;
         }
+
         .badge-utech {
             background-color: #e6b42220;
             color: #b87d0c;
@@ -439,6 +544,7 @@
             border-radius: 100px;
             font-size: 0.8rem;
         }
+
         .icon-bg {
             background: #eefbf8;
             width: 60px;
@@ -451,39 +557,49 @@
             color: #124a3f;
             margin-bottom: 1rem;
         }
+
         .nav-link {
             font-weight: 500;
             color: #1e2a3e;
             margin: 0 8px;
         }
+
         .nav-link:hover {
             color: #e6b422;
         }
+
         @media (max-width: 768px) {
             .section-title {
                 font-size: 1.9rem;
             }
+
             .hero h1 {
                 font-size: 2rem;
             }
         }
+
         .counter-number {
             font-size: 2.5rem;
             font-weight: 800;
             color: #0b2b26;
         }
+
         .carousel {
             position: relative;
         }
+
         .carousel-inner {
             overflow: hidden;
         }
+
         .carousel-item {
             display: none;
         }
+
         .carousel-item.active {
             display: block;
         }
+
         .carousel-control-prev,
         .carousel-control-next {
             position: absolute;
@@ -496,12 +612,15 @@
             transform: translateY(-50%);
             cursor: pointer;
         }
+
         .carousel-control-prev {
             left: -10px;
         }
+
         .carousel-control-next {
             right: -10px;
         }
+
         .carousel-control-prev-icon,
         .carousel-control-next-icon {
             background-color: #124a3f;
@@ -512,70 +631,88 @@
             align-items: center;
             justify-content: center;
         }
+
         .carousel-control-prev-icon::before {
             content: "\f053";
             font-family: "Font Awesome 6 Free";
             font-weight: 900;
             color: #fff;
         }
+
         .carousel-control-next-icon::before {
             content: "\f054";
             font-family: "Font Awesome 6 Free";
             font-weight: 900;
             color: #fff;
         }
+
         @media (min-width: 576px) {
             .col-sm-6 {
                 width: 50%;
             }
         }
+
         .col-6 {
             width: 50%;
         }
+
         .col-12 {
             width: 100%;
         }
+
         @media (min-width: 768px) {
             .col-md-2 {
                 width: 16.6667%;
             }
+
             .col-md-3 {
                 width: 25%;
             }
+
             .col-md-4 {
                 width: 33.3333%;
             }
+
             .col-md-6 {
                 width: 50%;
             }
+
             .mx-md-5 {
                 margin-inline: 3rem;
             }
         }
+
         @media (min-width: 992px) {
             .col-lg-4 {
                 width: 33.3333%;
             }
+
             .col-lg-5 {
                 width: 41.6667%;
             }
+
             .col-lg-6 {
                 width: 50%;
             }
+
             .col-lg-7 {
                 width: 58.3333%;
             }
+
             .mb-lg-0 {
                 margin-bottom: 0;
             }
         }
+
         @media (max-width: 991px) {
-            .navbar > .container {
+            .navbar>.container {
                 flex-wrap: wrap;
             }
+
             .navbar-toggler {
                 display: inline-flex;
             }
+
             .navbar-collapse {
                 display: none;
                 width: 100%;
@@ -584,354 +721,524 @@
                 align-items: stretch;
                 padding-top: 1rem;
             }
+
             .navbar-collapse.show {
                 display: flex;
             }
+
             .navbar-nav {
                 flex-direction: column;
                 align-items: flex-start;
                 gap: 0.25rem;
                 margin-inline: 0;
             }
+
             .nav-link {
                 display: block;
                 padding-block: 0.45rem;
             }
+
             .carousel-control-prev {
                 left: 0;
             }
+
             .carousel-control-next {
                 right: 0;
             }
         }
     </style>
 </head>
+
 <body>
 
-<nav class="navbar navbar-custom fixed-top">
-    <div class="container">
-        <a class="navbar-brand fw-bold fs-3" href="#" style="color: #0b2b26;">
-            <i class="fas fa-university me-2" style="color: #e6b422;"></i>UTech, JA
-        </a>
-        <button class="navbar-toggler" type="button" aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="navbar-collapse" id="mainNav">
-            <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
-                <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
-                <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
-                <li class="nav-item"><a class="nav-link" href="#academics">Academics</a></li>
-                <li class="nav-item"><a class="nav-link" href="#programs">Programs</a></li>
-                <li class="nav-item"><a class="nav-link" href="#innovation">Innovation</a></li>
-                <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
-            </ul>
-            <a href="#" class="btn btn-outline-utech">Apply Now <i class="fas fa-arrow-right ms-1"></i></a>
+    <nav class="navbar navbar-custom fixed-top">
+        <div class="container">
+            <a class="navbar-brand fw-bold fs-3" href="#" style="color: #0b2b26;">
+                <i class="fas fa-university me-2" style="color: #e6b422;"></i>UTech, JA
+            </a>
+            <button class="navbar-toggler" type="button" aria-controls="mainNav" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="navbar-collapse" id="mainNav">
+                <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+                    <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#academics">Academics</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#programs">Programs</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#innovation">Innovation</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                </ul>
+                <a href="#" class="btn btn-outline-utech">Apply Now <i class="fas fa-arrow-right ms-1"></i></a>
+            </div>
         </div>
-    </div>
-</nav>
+    </nav>
 
-<!-- Hero Section (big bold statement like ITSourceProviders) -->
-<section id="home" class="hero-gradient pt-5 mt-5">
-    <div class="container py-5">
-        <div class="row align-items-center g-5">
-            <div class="col-lg-6" data-aos="fade-right">
-                <span class="badge-utech mb-3 d-inline-block"><i class="fas fa-chalkboard-user me-1"></i> Excellence in Education & Research</span>
-                <h1 class="display-4 fw-bold mb-4" style="color: #0b2b26;">Shape the future with <span style="color: #e6b422;">technology & innovation</span></h1>
-                <p class="lead mb-4 text-secondary">UTech, Jamaica – the Caribbean’s leading university of technology, driving digital transformation, engineering, and sustainable development since 1958.</p>
-                <div class="d-flex gap-3 flex-wrap">
-                    <a href="#" class="btn btn-utech">Explore Programs <i class="fas fa-graduation-cap ms-2"></i></a>
-                    <a href="#" class="btn btn-outline-secondary rounded-pill">Virtual Tour <i class="fas fa-vr-cardboard ms-2"></i></a>
-                </div>
-            </div>
-            <div class="col-lg-6 text-center">
-                <img src="https://placehold.co/600x450/f0f4f3/1e2a3e?text=UTech+Campus+Hub" class="img-fluid rounded-4 shadow-lg" alt="UTech Campus">
-            </div>
-        </div>
-    </div>
-</section>
-
-<section class="container my-5 py-4">
-    <div class="row g-4 text-center">
-        <div class="col-md-3 col-6">
-            <div class="stat-card">
-                <div class="counter-number" id="statStudents">0</div>
-                <p class="fw-semibold mb-0">+ Students Enrolled</p>
-                <small class="text-muted">world-class learners</small>
-            </div>
-        </div>
-        <div class="col-md-3 col-6">
-            <div class="stat-card">
-                <div class="counter-number" id="statPrograms">0</div>
-                <p class="fw-semibold mb-0">Academic Programs</p>
-                <small class="text-muted">STEM & Business</small>
-            </div>
-        </div>
-        <div class="col-md-3 col-6">
-            <div class="stat-card">
-                <div class="counter-number" id="statPartners">0</div>
-                <p class="fw-semibold mb-0">Industry Partners</p>
-                <small class="text-muted">Global Collaborations</small>
-            </div>
-        </div>
-        <div class="col-md-3 col-6">
-            <div class="stat-card">
-                <div class="counter-number" id="statResearch">0</div>
-                <p class="fw-semibold mb-0">Research Centers</p>
-                <small class="text-muted">Innovation Hubs</small>
-            </div>
-        </div>
-    </div>
-</section>
-
-<section id="about" class="container my-5 py-5">
-    <div class="row align-items-center">
-        <div class="col-lg-6 mb-4 mb-lg-0">
-            <span class="badge-utech">ABOUT UTech</span>
-            <h2 class="section-title mt-2">Jamaica’s premier <br>technological university</h2>
-            <p class="text-secondary">UTech is dedicated to producing career-ready graduates with a focus on applied research, technical depth, and real-world impact. Our modern curriculum merges theory with hands-on labs, co-op placements, and digital innovation labs.</p>
-            <div class="mt-4">
-                <div class="mb-3">
-                    <div class="d-flex justify-content-between"><span>Digital transformation readiness</span><span>94%</span></div>
-                    <div class="progress progress-custom mt-1"><div class="progress-bar progress-bar-custom" style="width:94%"></div></div>
-                </div>
-                <div class="mb-3">
-                    <div class="d-flex justify-content-between"><span>Research output growth</span><span>87%</span></div>
-                    <div class="progress progress-custom mt-1"><div class="progress-bar progress-bar-custom" style="width:87%"></div></div>
-                </div>
-                <div class="mb-3">
-                    <div class="d-flex justify-content-between"><span>Graduate employability rate</span><span>92%</span></div>
-                    <div class="progress progress-custom mt-1"><div class="progress-bar progress-bar-custom" style="width:92%"></div></div>
-                </div>
-            </div>
-        </div>
-        <div class="col-lg-6">
-            <div class="row g-3">
-                <div class="col-sm-6"><div class="card-modern p-4 text-center"><i class="fas fa-laptop-code fa-2x mb-3" style="color:#e6b422"></i><h5>Digital Campus</h5><p class="small">Hybrid learning & AI labs</p></div></div>
-                <div class="col-sm-6"><div class="card-modern p-4 text-center"><i class="fas fa-microchip fa-2x mb-3" style="color:#e6b422"></i><h5>Engineering Hub</h5><p class="small">Robotics, mechatronics & more</p></div></div>
-                <div class="col-sm-6"><div class="card-modern p-4 text-center"><i class="fas fa-chart-line fa-2x mb-3" style="color:#e6b422"></i><h5>Business Analytics</h5><p class="small">Data-driven leadership</p></div></div>
-                <div class="col-sm-6"><div class="card-modern p-4 text-center"><i class="fas fa-leaf fa-2x mb-3" style="color:#e6b422"></i><h5>Sustainable Futures</h5><p class="small">Green tech initiatives</p></div></div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- Services / academic core pillars (inspired by wide range services) -->
-<section id="academics" class="bg-light py-5">
-    <div class="container py-4">
-        <div class="text-center">
-            <span class="badge-utech">Academic Excellence</span>
-            <h2 class="section-title">Cutting-edge faculties designed for digital growth</h2>
-            <p class="section-sub">From engineering to health sciences, UTech builds future-proof skills in high-demand sectors.</p>
-        </div>
-        <div class="row g-4 mt-3">
-            <div class="col-md-6 col-lg-4"><div class="card-modern p-4"><div class="icon-bg"><i class="fas fa-robot"></i></div><h4>Engineering & Computing</h4><p>Software engineering, cybersecurity, AI, and computer networks — accredited programs with industry labs.</p></div></div>
-            <div class="col-md-6 col-lg-4"><div class="card-modern p-4"><div class="icon-bg"><i class="fas fa-chart-simple"></i></div><h4>Business & Management</h4><p>Digital marketing, operations, fintech & entrepreneurship — bridging commerce and technology.</p></div></div>
-            <div class="col-md-6 col-lg-4"><div class="card-modern p-4"><div class="icon-bg"><i class="fas fa-heartbeat"></i></div><h4>Health & Applied Sciences</h4><p>Nursing, public health, pharmaceutical sciences — innovation in healthcare delivery.</p></div></div>
-            <div class="col-md-6 col-lg-4"><div class="card-modern p-4"><div class="icon-bg"><i class="fas fa-chalkboard"></i></div><h4>Education & Leadership</h4><p>Teacher training, technical vocational pedagogy, and EdTech specialization.</p></div></div>
-            <div class="col-md-6 col-lg-4"><div class="card-modern p-4"><div class="icon-bg"><i class="fas fa-building"></i></div><h4>Built Environment</h4><p>Architecture, construction management, urban planning with sustainable design.</p></div></div>
-            <div class="col-md-6 col-lg-4"><div class="card-modern p-4"><div class="icon-bg"><i class="fas fa-database"></i></div><h4>Data Science Institute</h4><p>Big data, analytics, and AI governance for modern economies.</p></div></div>
-        </div>
-    </div>
-</section>
-
-<section id="innovation" class="container my-5 py-5">
-    <div class="text-center">
-        <span class="badge-utech"><i class="fas fa-flask"></i> RESEARCH & INNOVATION</span>
-        <h2 class="section-title">Transforming industries through applied research</h2>
-        <p class="section-sub">Explore UTech-led projects that drive real impact in the Caribbean and globally.</p>
-    </div>
-    <div id="innovationCarousel" class="carousel slide mt-4">
-        <div class="carousel-inner rounded-4 shadow-lg">
-            <div class="carousel-item active">
-                <div class="row g-0 bg-white p-4 align-items-center">
-                    <div class="col-md-6 p-4"><h3 class="fw-bold">Smart Agriculture Monitoring System</h3><p>IoT-powered solution for Jamaican farms: real-time soil sensors, crop prediction, and climate adaptation dashboard. Developed with Ministry of Agriculture.</p><div class="mt-2"><span class="badge bg-dark">AI & IoT</span> <span class="badge bg-secondary">Sustainable Dev</span></div></div>
-                    <div class="col-md-6 text-center"><img src="https://placehold.co/500x300/eef2f0/2c3e2f?text=AgriTech+Lab" class="img-fluid rounded-3" alt="AgriTech"></div>
-                </div>
-            </div>
-            <div class="carousel-item">
-                <div class="row g-0 bg-white p-4 align-items-center">
-                    <div class="col-md-6 p-4"><h3 class="fw-bold">Caribbean Logistics Dashboard</h3><p>Operational analytics for shipping & logistics — real-time route planning, customs integration, and performance KPIs. Industry partnership with major freight companies.</p><div class="mt-2"><span class="badge bg-dark">Logistics Tech</span> <span class="badge bg-secondary">Data Analytics</span></div></div>
-                    <div class="col-md-6 text-center"><img src="https://placehold.co/500x300/eef2f0/2c3e2f?text=Supply+Chain+Hub" class="img-fluid rounded-3" alt="logistics"></div>
-                </div>
-            </div>
-            <div class="carousel-item">
-                <div class="row g-0 bg-white p-4 align-items-center">
-                    <div class="col-md-6 p-4"><h3 class="fw-bold">EduTech Learning Management</h3><p>A complete LMS for regional schools: gradebook, attendance, assignment and parent-teacher portal. Scaled to 120 institutions and counting.</p><div class="mt-2"><span class="badge bg-dark">EdTech</span> <span class="badge bg-secondary">UX Design</span></div></div>
-                    <div class="col-md-6 text-center"><img src="https://placehold.co/500x300/eef2f0/2c3e2f?text=Digital+Classroom" class="img-fluid rounded-3" alt="LMS"></div>
-                </div>
-            </div>
-        </div>
-        <button class="carousel-control-prev" type="button" data-carousel-direction="prev" aria-label="Previous research project">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-        </button>
-        <button class="carousel-control-next" type="button" data-carousel-direction="next" aria-label="Next research project">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-        </button>
-    </div>
-</section>
-
-<!-- Programs / Degrees structured like featured projects + smart business transformation -->
-<section id="programs" class="bg-light py-5">
-    <div class="container">
-        <div class="text-center mb-5">
-            <span class="badge-utech">DEGREES & CERTIFICATIONS</span>
-            <h2 class="section-title">Launch your future with cutting-edge qualifications</h2>
-            <p class="section-sub">Bachelor’s, Master’s, and professional diplomas designed for the global digital economy.</p>
-        </div>
-        <div class="row g-4">
-            <div class="col-md-4"><div class="card-modern p-4"><i class="fas fa-microchip fa-2x mb-3" style="color:#e6b422"></i><h5>BSc. Computer Science</h5><p>Specializations in AI, software engineering, cybersecurity & data science.</p><a href="#" class="text-decoration-none fw-semibold">Learn more →</a></div></div>
-            <div class="col-md-4"><div class="card-modern p-4"><i class="fas fa-chart-line fa-2x mb-3" style="color:#e6b422"></i><h5>BSc. Business Information Technology</h5><p>Systems analysis, digital transformation, project management & ERP.</p><a href="#" class="text-decoration-none fw-semibold">Learn more →</a></div></div>
-            <div class="col-md-4"><div class="card-modern p-4"><i class="fas fa-tools fa-2x mb-3" style="color:#e6b422"></i><h5>MSc. Engineering Management</h5><p>Leadership in tech-driven industries, innovation strategy and operations.</p><a href="#" class="text-decoration-none fw-semibold">Learn more →</a></div></div>
-        </div>
-        <div class="text-center mt-5"><a href="#" class="btn btn-utech">View All Programs <i class="fas fa-arrow-right ms-2"></i></a></div>
-    </div>
-</section>
-
-<section class="bg-utech-primary text-white py-5 my-5 rounded-4 mx-3 mx-md-5">
-    <div class="container text-center py-5">
-        <h2 class="display-5 fw-semibold">Ready to join a community of innovators?</h2>
-        <p class="lead mt-2 mb-4">Apply for Fall 2025 intake — scholarships available for tech & engineering pathways.</p>
-        <a href="#" class="btn btn-utech btn-lg px-5">Apply Online <i class="fas fa-pen-alt ms-2"></i></a>
-        <p class="mt-3 small opacity-75">Need guidance? Contact our admissions team live</p>
-    </div>
-</section>
-
-<section id="contact" class="container py-5 my-4">
-    <div class="row g-5">
-        <div class="col-lg-5">
-            <span class="badge-utech"><i class="fas fa-envelope"></i> Get in touch</span>
-            <h2 class="section-title mt-2">Let’s talk about your academic journey</h2>
-            <p>Reach out to our advisors or visit our tech-infused campus. We’re here to help you shape your career.</p>
-            <ul class="list-unstyled mt-4">
-                <li class="mb-3"><i class="fas fa-map-pin me-3" style="color:#e6b422"></i> 237 Old Hope Road, Kingston 6, Jamaica</li>
-                <li class="mb-3"><i class="fas fa-phone-alt me-3" style="color:#e6b422"></i> +1 (876) 927-1680</li>
-                <li class="mb-3"><i class="fas fa-envelope me-3" style="color:#e6b422"></i> admissions@utech.edu.jm</li>
-            </ul>
-        </div>
-        <div class="col-lg-7">
-            <div class="card-modern p-4 shadow-sm">
-                <h4>Send an enquiry</h4>
-                <form id="contactForm">
-                    <div class="row g-3">
-                        <div class="col-md-6"><input type="text" class="form-control form-control-lg" placeholder="Full name" required></div>
-                        <div class="col-md-6"><input type="email" class="form-control form-control-lg" placeholder="Email address" required></div>
-                        <div class="col-12"><input type="text" class="form-control form-control-lg" placeholder="Program of interest"></div>
-                        <div class="col-12"><textarea rows="4" class="form-control" placeholder="Tell us about your goals..."></textarea></div>
-                        <div class="col-12"><button type="submit" class="btn btn-utech px-5">Send Message <i class="fas fa-paper-plane ms-2"></i></button></div>
+    <!-- Hero Section (big bold statement like ITSourceProviders) -->
+    <section id="home" class="hero-gradient pt-5 mt-5">
+        <div class="container py-5">
+            <div class="row align-items-center g-5">
+                <div class="col-lg-6" data-aos="fade-right">
+                    <span class="badge-utech mb-3 d-inline-block"><i class="fas fa-chalkboard-user me-1"></i> Excellence
+                        in Education & Research</span>
+                    <h1 class="display-4 fw-bold mb-4" style="color: #0b2b26;">Shape the future with <span
+                            style="color: #e6b422;">technology & innovation</span></h1>
+                    <p class="lead mb-4 text-secondary">UTech, Jamaica – the Caribbean’s leading university of
+                        technology, driving digital transformation, engineering, and sustainable development since 1958.
+                    </p>
+                    <div class="d-flex gap-3 flex-wrap">
+                        <a href="#" class="btn btn-utech">Explore Programs <i
+                                class="fas fa-graduation-cap ms-2"></i></a>
+                        <a href="#" class="btn btn-outline-secondary rounded-pill">Virtual Tour <i
+                                class="fas fa-vr-cardboard ms-2"></i></a>
                     </div>
-                </form>
-                <div id="formMsg" class="mt-3 small text-success"></div>
+                </div>
+                <div class="col-lg-6 text-center">
+                    <img src="https://placehold.co/600x450/f0f4f3/1e2a3e?text=UTech+Campus+Hub"
+                        class="img-fluid rounded-4 shadow-lg" alt="UTech Campus">
+                </div>
             </div>
         </div>
-    </div>
-</section>
+    </section>
 
-<footer class="footer pt-5 pb-4 mt-5">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-4 mb-4"><h5 class="fw-bold text-white"><i class="fas fa-university me-2"></i>UTech, Jamaica</h5><p class="small opacity-75">Leading the way in technological education, research and innovation for over six decades.</p></div>
-            <div class="col-md-2 mb-4"><h6 class="fw-semibold">Quick Links</h6><ul class="list-unstyled small"><li>About Us</li><li>Admissions</li><li>Academic Calendar</li><li>E-Library</li></ul></div>
-            <div class="col-md-3 mb-4"><h6 class="fw-semibold">Resources</h6><ul class="list-unstyled small"><li>Student Portal</li><li>Faculty Directory</li><li>Research Gateways</li><li>Innovation Lab</li></ul></div>
-            <div class="col-md-3 mb-4"><h6 class="fw-semibold">Connect</h6><div class="d-flex gap-3 fs-5"><i class="fab fa-facebook"></i><i class="fab fa-twitter"></i><i class="fab fa-linkedin-in"></i><i class="fab fa-instagram"></i></div><p class="mt-3 small">© 2025 University of Technology, Jamaica</p></div>
+    <section class="container my-5 py-4">
+        <div class="row g-4 text-center">
+            <div class="col-md-3 col-6">
+                <div class="stat-card">
+                    <div class="counter-number" id="statStudents">0</div>
+                    <p class="fw-semibold mb-0">+ Students Enrolled</p>
+                    <small class="text-muted">world-class learners</small>
+                </div>
+            </div>
+            <div class="col-md-3 col-6">
+                <div class="stat-card">
+                    <div class="counter-number" id="statPrograms">0</div>
+                    <p class="fw-semibold mb-0">Academic Programs</p>
+                    <small class="text-muted">STEM & Business</small>
+                </div>
+            </div>
+            <div class="col-md-3 col-6">
+                <div class="stat-card">
+                    <div class="counter-number" id="statPartners">0</div>
+                    <p class="fw-semibold mb-0">Industry Partners</p>
+                    <small class="text-muted">Global Collaborations</small>
+                </div>
+            </div>
+            <div class="col-md-3 col-6">
+                <div class="stat-card">
+                    <div class="counter-number" id="statResearch">0</div>
+                    <p class="fw-semibold mb-0">Research Centers</p>
+                    <small class="text-muted">Innovation Hubs</small>
+                </div>
+            </div>
         </div>
-    </div>
-</footer>
+    </section>
 
-<script>
-    document.addEventListener('DOMContentLoaded', function() {
-        const navToggle = document.querySelector('.navbar-toggler');
-        const mainNav = document.querySelector('#mainNav');
+    <section id="about" class="container my-5 py-5">
+        <div class="row align-items-center">
+            <div class="col-lg-6 mb-4 mb-lg-0">
+                <span class="badge-utech">ABOUT UTech</span>
+                <h2 class="section-title mt-2">Jamaica’s premier <br>technological university</h2>
+                <p class="text-secondary">UTech is dedicated to producing career-ready graduates with a focus on applied
+                    research, technical depth, and real-world impact. Our modern curriculum merges theory with hands-on
+                    labs, co-op placements, and digital innovation labs.</p>
+                <div class="mt-4">
+                    <div class="mb-3">
+                        <div class="d-flex justify-content-between"><span>Digital transformation
+                                readiness</span><span>94%</span></div>
+                        <div class="progress progress-custom mt-1">
+                            <div class="progress-bar progress-bar-custom" style="width:94%"></div>
+                        </div>
+                    </div>
+                    <div class="mb-3">
+                        <div class="d-flex justify-content-between"><span>Research output growth</span><span>87%</span>
+                        </div>
+                        <div class="progress progress-custom mt-1">
+                            <div class="progress-bar progress-bar-custom" style="width:87%"></div>
+                        </div>
+                    </div>
+                    <div class="mb-3">
+                        <div class="d-flex justify-content-between"><span>Graduate employability
+                                rate</span><span>92%</span></div>
+                        <div class="progress progress-custom mt-1">
+                            <div class="progress-bar progress-bar-custom" style="width:92%"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="row g-3">
+                    <div class="col-sm-6">
+                        <div class="card-modern p-4 text-center"><i class="fas fa-laptop-code fa-2x mb-3"
+                                style="color:#e6b422"></i>
+                            <h5>Digital Campus</h5>
+                            <p class="small">Hybrid learning & AI labs</p>
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="card-modern p-4 text-center"><i class="fas fa-microchip fa-2x mb-3"
+                                style="color:#e6b422"></i>
+                            <h5>Engineering Hub</h5>
+                            <p class="small">Robotics, mechatronics & more</p>
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="card-modern p-4 text-center"><i class="fas fa-chart-line fa-2x mb-3"
+                                style="color:#e6b422"></i>
+                            <h5>Business Analytics</h5>
+                            <p class="small">Data-driven leadership</p>
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="card-modern p-4 text-center"><i class="fas fa-leaf fa-2x mb-3"
+                                style="color:#e6b422"></i>
+                            <h5>Sustainable Futures</h5>
+                            <p class="small">Green tech initiatives</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-        navToggle.addEventListener('click', function() {
-            const isOpen = mainNav.classList.toggle('show');
-            navToggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
-        });
+    <!-- Services / academic core pillars (inspired by wide range services) -->
+    <section id="academics" class="bg-light py-5">
+        <div class="container py-4">
+            <div class="text-center">
+                <span class="badge-utech">Academic Excellence</span>
+                <h2 class="section-title">Cutting-edge faculties designed for digital growth</h2>
+                <p class="section-sub">From engineering to health sciences, UTech builds future-proof skills in
+                    high-demand sectors.</p>
+            </div>
+            <div class="row g-4 mt-3">
+                <div class="col-md-6 col-lg-4">
+                    <div class="card-modern p-4">
+                        <div class="icon-bg"><i class="fas fa-robot"></i></div>
+                        <h4>Engineering & Computing</h4>
+                        <p>Software engineering, cybersecurity, AI, and computer networks — accredited programs with
+                            industry labs.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="card-modern p-4">
+                        <div class="icon-bg"><i class="fas fa-chart-column"></i></div>
+                        <h4>Business & Management</h4>
+                        <p>Digital marketing, operations, fintech & entrepreneurship — bridging commerce and technology.
+                        </p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="card-modern p-4">
+                        <div class="icon-bg"><i class="fas fa-heartbeat"></i></div>
+                        <h4>Health & Applied Sciences</h4>
+                        <p>Nursing, public health, pharmaceutical sciences — innovation in healthcare delivery.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="card-modern p-4">
+                        <div class="icon-bg"><i class="fas fa-chalkboard"></i></div>
+                        <h4>Education & Leadership</h4>
+                        <p>Teacher training, technical vocational pedagogy, and EdTech specialization.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="card-modern p-4">
+                        <div class="icon-bg"><i class="fas fa-building"></i></div>
+                        <h4>Built Environment</h4>
+                        <p>Architecture, construction management, urban planning with sustainable design.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="card-modern p-4">
+                        <div class="icon-bg"><i class="fas fa-database"></i></div>
+                        <h4>Data Science Institute</h4>
+                        <p>Big data, analytics, and AI governance for modern economies.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-        function animateCounter(selector, start, end, duration) {
-            const element = document.querySelector(selector);
-            const startTime = performance.now();
+    <section id="innovation" class="container my-5 py-5">
+        <div class="text-center">
+            <span class="badge-utech"><i class="fas fa-flask"></i> RESEARCH & INNOVATION</span>
+            <h2 class="section-title">Transforming industries through applied research</h2>
+            <p class="section-sub">Explore UTech-led projects that drive real impact in the Caribbean and globally.</p>
+        </div>
+        <div id="innovationCarousel" class="carousel slide mt-4">
+            <div class="carousel-inner rounded-4 shadow-lg">
+                <div class="carousel-item active">
+                    <div class="row g-0 bg-white p-4 align-items-center">
+                        <div class="col-md-6 p-4">
+                            <h3 class="fw-bold">Smart Agriculture Monitoring System</h3>
+                            <p>IoT-powered solution for Jamaican farms: real-time soil sensors, crop prediction, and
+                                climate adaptation dashboard. Developed with Ministry of Agriculture.</p>
+                            <div class="mt-2"><span class="badge bg-dark">AI & IoT</span> <span
+                                    class="badge bg-secondary">Sustainable Dev</span></div>
+                        </div>
+                        <div class="col-md-6 text-center"><img
+                                src="https://placehold.co/500x300/eef2f0/2c3e2f?text=AgriTech+Lab"
+                                class="img-fluid rounded-3" alt="AgriTech"></div>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="row g-0 bg-white p-4 align-items-center">
+                        <div class="col-md-6 p-4">
+                            <h3 class="fw-bold">Caribbean Logistics Dashboard</h3>
+                            <p>Operational analytics for shipping & logistics — real-time route planning, customs
+                                integration, and performance KPIs. Industry partnership with major freight companies.
+                            </p>
+                            <div class="mt-2"><span class="badge bg-dark">Logistics Tech</span> <span
+                                    class="badge bg-secondary">Data Analytics</span></div>
+                        </div>
+                        <div class="col-md-6 text-center"><img
+                                src="https://placehold.co/500x300/eef2f0/2c3e2f?text=Supply+Chain+Hub"
+                                class="img-fluid rounded-3" alt="logistics"></div>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="row g-0 bg-white p-4 align-items-center">
+                        <div class="col-md-6 p-4">
+                            <h3 class="fw-bold">EduTech Learning Management</h3>
+                            <p>A complete LMS for regional schools: gradebook, attendance, assignment and parent-teacher
+                                portal. Scaled to 120 institutions and counting.</p>
+                            <div class="mt-2"><span class="badge bg-dark">EdTech</span> <span
+                                    class="badge bg-secondary">UX Design</span></div>
+                        </div>
+                        <div class="col-md-6 text-center"><img
+                                src="https://placehold.co/500x300/eef2f0/2c3e2f?text=Digital+Classroom"
+                                class="img-fluid rounded-3" alt="LMS"></div>
+                    </div>
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-carousel-direction="prev"
+                aria-label="Previous research project">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            </button>
+            <button class="carousel-control-next" type="button" data-carousel-direction="next"
+                aria-label="Next research project">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            </button>
+        </div>
+    </section>
 
-            function update(now) {
-                const progress = Math.min((now - startTime) / duration, 1);
-                const value = Math.floor(start + (end - start) * progress);
-                element.textContent = value.toLocaleString();
+    <!-- Programs / Degrees structured like featured projects + smart business transformation -->
+    <section id="programs" class="bg-light py-5">
+        <div class="container">
+            <div class="text-center mb-5">
+                <span class="badge-utech">DEGREES & CERTIFICATIONS</span>
+                <h2 class="section-title">Launch your future with cutting-edge qualifications</h2>
+                <p class="section-sub">Bachelor’s, Master’s, and professional diplomas designed for the global digital
+                    economy.</p>
+            </div>
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="card-modern p-4"><i class="fas fa-microchip fa-2x mb-3" style="color:#e6b422"></i>
+                        <h5>BSc. Computer Science</h5>
+                        <p>Specializations in AI, software engineering, cybersecurity & data science.</p><a href="#"
+                            class="text-decoration-none fw-semibold">Learn more →</a>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card-modern p-4"><i class="fas fa-chart-line fa-2x mb-3" style="color:#e6b422"></i>
+                        <h5>BSc. Business Information Technology</h5>
+                        <p>Systems analysis, digital transformation, project management & ERP.</p><a href="#"
+                            class="text-decoration-none fw-semibold">Learn more →</a>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card-modern p-4"><i class="fas fa-tools fa-2x mb-3" style="color:#e6b422"></i>
+                        <h5>MSc. Engineering Management</h5>
+                        <p>Leadership in tech-driven industries, innovation strategy and operations.</p><a href="#"
+                            class="text-decoration-none fw-semibold">Learn more →</a>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center mt-5"><a href="#" class="btn btn-utech">View All Programs <i
+                        class="fas fa-arrow-right ms-2"></i></a></div>
+        </div>
+    </section>
 
-                if (progress < 1) {
-                    requestAnimationFrame(update);
+    <section class="bg-utech-primary text-white py-5 my-5 rounded-4 mx-3 mx-md-5">
+        <div class="container text-center py-5">
+            <h2 class="display-5 fw-semibold">Ready to join a community of innovators?</h2>
+            <p class="lead mt-2 mb-4">Apply for Fall 2025 intake — scholarships available for tech & engineering
+                pathways.</p>
+            <a href="#" class="btn btn-utech btn-lg px-5">Apply Online <i class="fas fa-pen-alt ms-2"></i></a>
+            <p class="mt-3 small opacity-75">Need guidance? Contact our admissions team live</p>
+        </div>
+    </section>
+
+    <section id="contact" class="container py-5 my-4">
+        <div class="row g-5">
+            <div class="col-lg-5">
+                <span class="badge-utech"><i class="fas fa-envelope"></i> Get in touch</span>
+                <h2 class="section-title mt-2">Let’s talk about your academic journey</h2>
+                <p>Reach out to our advisors or visit our tech-infused campus. We’re here to help you shape your career.
+                </p>
+                <ul class="list-unstyled mt-4">
+                    <li class="mb-3"><i class="fas fa-map-pin me-3" style="color:#e6b422"></i> 237 Old Hope Road,
+                        Kingston 6, Jamaica</li>
+                    <li class="mb-3"><i class="fas fa-phone-alt me-3" style="color:#e6b422"></i> +1 (876) 927-1680</li>
+                    <li class="mb-3"><i class="fas fa-envelope me-3" style="color:#e6b422"></i> admissions@utech.edu.jm
+                    </li>
+                </ul>
+            </div>
+            <div class="col-lg-7">
+                <div class="card-modern p-4 shadow-sm">
+                    <h4>Send an enquiry</h4>
+                    <form id="contactForm">
+                        <div class="row g-3">
+                            <div class="col-md-6"><input type="text" class="form-control form-control-lg"
+                                    placeholder="Full name" required></div>
+                            <div class="col-md-6"><input type="email" class="form-control form-control-lg"
+                                    placeholder="Email address" required></div>
+                            <div class="col-12"><input type="text" class="form-control form-control-lg"
+                                    placeholder="Program of interest"></div>
+                            <div class="col-12"><textarea rows="4" class="form-control"
+                                    placeholder="Tell us about your goals..."></textarea></div>
+                            <div class="col-12"><button type="submit" class="btn btn-utech px-5">Send Message <i
+                                        class="fas fa-paper-plane ms-2"></i></button></div>
+                        </div>
+                    </form>
+                    <div id="formMsg" class="mt-3 small text-success"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer pt-5 pb-4 mt-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 mb-4">
+                    <h5 class="fw-bold text-white"><i class="fas fa-university me-2"></i>UTech, Jamaica</h5>
+                    <p class="small opacity-75">Leading the way in technological education, research and innovation for
+                        over six decades.</p>
+                </div>
+                <div class="col-md-2 mb-4">
+                    <h6 class="fw-semibold">Quick Links</h6>
+                    <ul class="list-unstyled small">
+                        <li>About Us</li>
+                        <li>Admissions</li>
+                        <li>Academic Calendar</li>
+                        <li>E-Library</li>
+                    </ul>
+                </div>
+                <div class="col-md-3 mb-4">
+                    <h6 class="fw-semibold">Resources</h6>
+                    <ul class="list-unstyled small">
+                        <li>Student Portal</li>
+                        <li>Faculty Directory</li>
+                        <li>Research Gateways</li>
+                        <li>Innovation Lab</li>
+                    </ul>
+                </div>
+                <div class="col-md-3 mb-4">
+                    <h6 class="fw-semibold">Connect</h6>
+                    <div class="d-flex gap-3 fs-5"><i class="fab fa-facebook"></i><i class="fab fa-twitter"></i><i
+                            class="fab fa-linkedin-in"></i><i class="fab fa-instagram"></i></div>
+                    <p class="mt-3 small">© 2025 University of Technology, Jamaica</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const navToggle = document.querySelector('.navbar-toggler');
+            const mainNav = document.querySelector('#mainNav');
+
+            navToggle.addEventListener('click', function () {
+                const isOpen = mainNav.classList.toggle('show');
+                navToggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+            });
+
+            function animateCounter(selector, start, end, duration) {
+                const element = document.querySelector(selector);
+                const startTime = performance.now();
+
+                function update(now) {
+                    const progress = Math.min((now - startTime) / duration, 1);
+                    const value = Math.floor(start + (end - start) * progress);
+                    element.textContent = value.toLocaleString();
+
+                    if (progress < 1) {
+                        requestAnimationFrame(update);
+                    }
+                }
+
+                requestAnimationFrame(update);
+            }
+
+            let counted = false;
+            function startCounters() {
+                const firstStat = document.querySelector('.stat-card');
+                if (!firstStat || counted) return;
+
+                const statsTop = firstStat.getBoundingClientRect().top + window.scrollY - 500;
+                if (window.scrollY > statsTop) {
+                    counted = true;
+                    animateCounter('#statStudents', 0, 12480, 2000);
+                    animateCounter('#statPrograms', 0, 86, 1500);
+                    animateCounter('#statPartners', 0, 210, 1500);
+                    animateCounter('#statResearch', 0, 12, 1200);
                 }
             }
 
-            requestAnimationFrame(update);
-        }
+            window.addEventListener('scroll', startCounters, { passive: true });
+            setTimeout(startCounters, 300);
 
-        let counted = false;
-        function startCounters() {
-            const firstStat = document.querySelector('.stat-card');
-            if (!firstStat || counted) return;
-
-            const statsTop = firstStat.getBoundingClientRect().top + window.scrollY - 500;
-            if (window.scrollY > statsTop) {
-                counted = true;
-                animateCounter('#statStudents', 0, 12480, 2000);
-                animateCounter('#statPrograms', 0, 86, 1500);
-                animateCounter('#statPartners', 0, 210, 1500);
-                animateCounter('#statResearch', 0, 12, 1200);
-            }
-        }
-
-        window.addEventListener('scroll', startCounters, { passive: true });
-        setTimeout(startCounters, 300);
-
-        const contactForm = document.querySelector('#contactForm');
-        const formMessage = document.querySelector('#formMsg');
-        contactForm.addEventListener('submit', function(event) {
-            event.preventDefault();
-            formMessage.innerHTML = '<i class="fas fa-check-circle"></i> Thanks! Our team will reach out within 24 hours.';
-            formMessage.style.display = 'block';
-            contactForm.reset();
-
-            setTimeout(function() {
-                formMessage.style.display = 'none';
-            }, 3000);
-        });
-
-        document.querySelectorAll('.nav-link').forEach(function(link) {
-            link.addEventListener('click', function(event) {
-                if (!link.hash) return;
-
-                const target = document.querySelector(link.hash);
-                if (!target) return;
-
+            const contactForm = document.querySelector('#contactForm');
+            const formMessage = document.querySelector('#formMsg');
+            contactForm.addEventListener('submit', function (event) {
                 event.preventDefault();
-                window.scrollTo({
-                    top: target.getBoundingClientRect().top + window.scrollY - 70,
-                    behavior: 'smooth'
+                formMessage.innerHTML = '<i class="fas fa-check-circle"></i> Thanks! Our team will reach out within 24 hours.';
+                formMessage.style.display = 'block';
+                contactForm.reset();
+
+                setTimeout(function () {
+                    formMessage.style.display = 'none';
+                }, 3000);
+            });
+
+            document.querySelectorAll('.nav-link').forEach(function (link) {
+                link.addEventListener('click', function (event) {
+                    if (!link.hash) return;
+
+                    const target = document.querySelector(link.hash);
+                    if (!target) return;
+
+                    event.preventDefault();
+                    window.scrollTo({
+                        top: target.getBoundingClientRect().top + window.scrollY - 70,
+                        behavior: 'smooth'
+                    });
+                    mainNav.classList.remove('show');
+                    navToggle.setAttribute('aria-expanded', 'false');
                 });
-                mainNav.classList.remove('show');
-                navToggle.setAttribute('aria-expanded', 'false');
+            });
+
+            const carousel = document.querySelector('#innovationCarousel');
+            const items = Array.from(carousel.querySelectorAll('.carousel-item'));
+            let activeIndex = items.findIndex(function (item) {
+                return item.classList.contains('active');
+            });
+            if (activeIndex < 0) activeIndex = 0;
+
+            function showSlide(nextIndex) {
+                items[activeIndex].classList.remove('active');
+                activeIndex = (nextIndex + items.length) % items.length;
+                items[activeIndex].classList.add('active');
+            }
+
+            carousel.querySelectorAll('[data-carousel-direction]').forEach(function (button) {
+                button.addEventListener('click', function () {
+                    const direction = button.dataset.carouselDirection === 'next' ? 1 : -1;
+                    showSlide(activeIndex + direction);
+                });
             });
         });
-
-        const carousel = document.querySelector('#innovationCarousel');
-        const items = Array.from(carousel.querySelectorAll('.carousel-item'));
-        let activeIndex = items.findIndex(function(item) {
-            return item.classList.contains('active');
-        });
-        if (activeIndex < 0) activeIndex = 0;
-
-        function showSlide(nextIndex) {
-            items[activeIndex].classList.remove('active');
-            activeIndex = (nextIndex + items.length) % items.length;
-            items[activeIndex].classList.add('active');
-        }
-
-        carousel.querySelectorAll('[data-carousel-direction]').forEach(function(button) {
-            button.addEventListener('click', function() {
-                const direction = button.dataset.carouselDirection === 'next' ? 1 : -1;
-                showSlide(activeIndex + direction);
-            });
-        });
-    });
-</script>
+    </script>
 </body>
+
 </html>
