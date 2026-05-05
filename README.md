@@ -46,8 +46,8 @@ The Figma library includes:
 
 ## Implementation Notes
 
-- Built with **Bootstrap 5** for layout and responsiveness.
-- **jQuery** used for lightweight interactivity (counter animations, form handling, smooth scroll).
+- Built with **Vanilla CSS** for layout and responsiveness.
+- **Vanilla JS** used for lightweight interactivity (counter animations, form handling, smooth scroll).
 - Color palette defined with CSS custom properties for easy theming.
 - All assets (icons, placeholders) are ready for replacement with final photography and copy.
 
