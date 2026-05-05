@@ -4,13 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
     <title>UTech, Jamaica | Centre of Excellence</title>
-    <!-- Bootstrap 5 + Icons + Fonts -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,600;14..32,700;14..32,800&display=swap" rel="stylesheet">
-    <!-- jQuery -->
-    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
     <style>
         * {
             margin: 0;
@@ -22,6 +17,332 @@
             background-color: #ffffff;
             color: #1e2a3e;
             scroll-behavior: smooth;
+            line-height: 1.5;
+            overflow-x: hidden;
+        }
+        a {
+            color: inherit;
+        }
+        img {
+            display: block;
+            max-width: 100%;
+        }
+        .container {
+            width: min(100% - 2rem, 1140px);
+            margin-inline: auto;
+        }
+        .row {
+            display: flex;
+            flex-wrap: wrap;
+            margin-inline: -0.75rem;
+        }
+        .row > * {
+            width: 100%;
+            padding-inline: 0.75rem;
+        }
+        .g-0 {
+            margin-inline: 0;
+        }
+        .g-0 > * {
+            padding-inline: 0;
+        }
+        .g-3 {
+            row-gap: 1rem;
+        }
+        .g-4 {
+            row-gap: 1.5rem;
+        }
+        .g-5 {
+            row-gap: 3rem;
+        }
+        .align-items-center {
+            align-items: center;
+        }
+        .justify-content-between {
+            justify-content: space-between;
+        }
+        .text-center {
+            text-align: center;
+        }
+        .text-white {
+            color: #fff;
+        }
+        .text-secondary {
+            color: #667085;
+        }
+        .text-muted {
+            color: #7b8794;
+        }
+        .text-success {
+            color: #198754;
+        }
+        .text-decoration-none {
+            text-decoration: none;
+        }
+        .bg-light {
+            background: #f8fafc;
+        }
+        .bg-white {
+            background: #fff;
+        }
+        .bg-dark {
+            background: #212529;
+            color: #fff;
+        }
+        .bg-secondary {
+            background: #6c757d;
+            color: #fff;
+        }
+        .small {
+            font-size: 0.875rem;
+        }
+        .lead {
+            font-size: 1.25rem;
+            font-weight: 400;
+        }
+        .display-4 {
+            font-size: clamp(2.4rem, 5vw, 3.5rem);
+            line-height: 1.12;
+        }
+        .display-5 {
+            font-size: clamp(2rem, 4vw, 3rem);
+            line-height: 1.18;
+        }
+        .fw-bold {
+            font-weight: 700;
+        }
+        .fw-semibold {
+            font-weight: 600;
+        }
+        .fs-3 {
+            font-size: 1.75rem;
+        }
+        .fs-5 {
+            font-size: 1.25rem;
+        }
+        .opacity-75 {
+            opacity: 0.75;
+        }
+        .d-flex {
+            display: flex;
+        }
+        .d-inline-block {
+            display: inline-block;
+        }
+        .flex-wrap {
+            flex-wrap: wrap;
+        }
+        .gap-3 {
+            gap: 1rem;
+        }
+        .my-4 {
+            margin-block: 1.5rem;
+        }
+        .my-5 {
+            margin-block: 3rem;
+        }
+        .mt-1 {
+            margin-top: 0.25rem;
+        }
+        .mt-2 {
+            margin-top: 0.5rem;
+        }
+        .mt-3 {
+            margin-top: 1rem;
+        }
+        .mt-4 {
+            margin-top: 1.5rem;
+        }
+        .mt-5 {
+            margin-top: 3rem;
+        }
+        .mb-0 {
+            margin-bottom: 0;
+        }
+        .mb-2 {
+            margin-bottom: 0.5rem;
+        }
+        .mb-3 {
+            margin-bottom: 1rem;
+        }
+        .mb-4 {
+            margin-bottom: 1.5rem;
+        }
+        .mb-5 {
+            margin-bottom: 3rem;
+        }
+        .me-1 {
+            margin-right: 0.25rem;
+        }
+        .me-2 {
+            margin-right: 0.5rem;
+        }
+        .me-3 {
+            margin-right: 1rem;
+        }
+        .ms-1 {
+            margin-left: 0.25rem;
+        }
+        .ms-2 {
+            margin-left: 0.5rem;
+        }
+        .mx-3 {
+            margin-inline: 1rem;
+        }
+        .mx-auto {
+            margin-inline: auto;
+        }
+        .p-4 {
+            padding: 1.5rem;
+        }
+        .px-5 {
+            padding-inline: 3rem;
+        }
+        .py-4 {
+            padding-block: 1.5rem;
+        }
+        .py-5 {
+            padding-block: 3rem;
+        }
+        .pt-5 {
+            padding-top: 3rem;
+        }
+        .pb-4 {
+            padding-bottom: 1.5rem;
+        }
+        .list-unstyled {
+            list-style: none;
+            padding-left: 0;
+        }
+        .fixed-top {
+            position: fixed;
+            top: 0;
+            right: 0;
+            left: 0;
+            z-index: 1000;
+        }
+        .navbar > .container {
+            display: flex;
+            align-items: center;
+            gap: 1.5rem;
+        }
+        .navbar-brand {
+            text-decoration: none;
+            white-space: nowrap;
+        }
+        .navbar-collapse {
+            display: flex;
+            align-items: center;
+            flex: 1;
+            gap: 1.5rem;
+        }
+        .navbar-nav {
+            display: flex;
+            align-items: center;
+            list-style: none;
+            padding-left: 0;
+            margin-bottom: 0;
+        }
+        .navbar-toggler {
+            display: none;
+            margin-left: auto;
+            width: 44px;
+            height: 40px;
+            border: 1px solid #d8e1df;
+            border-radius: 8px;
+            background: #fff;
+            cursor: pointer;
+            position: relative;
+        }
+        .navbar-toggler-icon,
+        .navbar-toggler-icon::before,
+        .navbar-toggler-icon::after {
+            position: absolute;
+            left: 10px;
+            width: 22px;
+            height: 2px;
+            background: #0b2b26;
+            content: "";
+        }
+        .navbar-toggler-icon {
+            top: 19px;
+        }
+        .navbar-toggler-icon::before {
+            top: -7px;
+            left: 0;
+        }
+        .navbar-toggler-icon::after {
+            top: 7px;
+            left: 0;
+        }
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            cursor: pointer;
+            font: inherit;
+        }
+        .btn-lg {
+            font-size: 1.15rem;
+            padding-block: 0.9rem;
+        }
+        .btn-outline-secondary {
+            border: 1px solid #8792a0;
+            background: transparent;
+            color: #4a5565;
+            font-weight: 600;
+            padding: 11px 24px;
+            transition: 0.3s;
+        }
+        .btn-outline-secondary:hover {
+            background: #4a5565;
+            color: #fff;
+            transform: translateY(-2px);
+        }
+        .img-fluid {
+            width: 100%;
+            height: auto;
+        }
+        .rounded-3 {
+            border-radius: 0.75rem;
+        }
+        .rounded-4 {
+            border-radius: 1rem;
+        }
+        .rounded-pill {
+            border-radius: 999px;
+        }
+        .shadow-sm {
+            box-shadow: 0 0.125rem 0.5rem rgba(0, 0, 0, 0.08);
+        }
+        .shadow-lg {
+            box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.14);
+        }
+        .form-control {
+            width: 100%;
+            border: 1px solid #d7e0df;
+            border-radius: 10px;
+            padding: 0.85rem 1rem;
+            font: inherit;
+            color: #1e2a3e;
+            background: #fff;
+            transition: border-color 0.2s, box-shadow 0.2s;
+        }
+        .form-control:focus {
+            border-color: #124a3f;
+            box-shadow: 0 0 0 4px rgba(18, 74, 63, 0.12);
+            outline: none;
+        }
+        .form-control-lg {
+            min-height: 48px;
+        }
+        .badge {
+            display: inline-block;
+            padding: 0.4em 0.65em;
+            border-radius: 6px;
+            font-size: 0.75rem;
+            font-weight: 600;
         }
         .bg-utech-primary {
             background: linear-gradient(135deg, #0b2b26 0%, #124a3f 100%);
@@ -103,10 +424,12 @@
             height: 8px;
             border-radius: 10px;
             background-color: #e2e8f0;
+            overflow: hidden;
         }
         .progress-bar-custom {
             background-color: #e6b422;
             border-radius: 10px;
+            height: 100%;
         }
         .badge-utech {
             background-color: #e6b42220;
@@ -149,24 +472,151 @@
             font-weight: 800;
             color: #0b2b26;
         }
-        .carousel-control-prev-icon, .carousel-control-next-icon {
+        .carousel {
+            position: relative;
+        }
+        .carousel-inner {
+            overflow: hidden;
+        }
+        .carousel-item {
+            display: none;
+        }
+        .carousel-item.active {
+            display: block;
+        }
+        .carousel-control-prev,
+        .carousel-control-next {
+            position: absolute;
+            top: 50%;
+            width: 44px;
+            height: 44px;
+            border: 0;
+            border-radius: 50%;
+            background: transparent;
+            transform: translateY(-50%);
+            cursor: pointer;
+        }
+        .carousel-control-prev {
+            left: -10px;
+        }
+        .carousel-control-next {
+            right: -10px;
+        }
+        .carousel-control-prev-icon,
+        .carousel-control-next-icon {
             background-color: #124a3f;
             border-radius: 50%;
-            padding: 20px;
+            width: 44px;
+            height: 44px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .carousel-control-prev-icon::before {
+            content: "\f053";
+            font-family: "Font Awesome 6 Free";
+            font-weight: 900;
+            color: #fff;
+        }
+        .carousel-control-next-icon::before {
+            content: "\f054";
+            font-family: "Font Awesome 6 Free";
+            font-weight: 900;
+            color: #fff;
+        }
+        @media (min-width: 576px) {
+            .col-sm-6 {
+                width: 50%;
+            }
+        }
+        .col-6 {
+            width: 50%;
+        }
+        .col-12 {
+            width: 100%;
+        }
+        @media (min-width: 768px) {
+            .col-md-2 {
+                width: 16.6667%;
+            }
+            .col-md-3 {
+                width: 25%;
+            }
+            .col-md-4 {
+                width: 33.3333%;
+            }
+            .col-md-6 {
+                width: 50%;
+            }
+            .mx-md-5 {
+                margin-inline: 3rem;
+            }
+        }
+        @media (min-width: 992px) {
+            .col-lg-4 {
+                width: 33.3333%;
+            }
+            .col-lg-5 {
+                width: 41.6667%;
+            }
+            .col-lg-6 {
+                width: 50%;
+            }
+            .col-lg-7 {
+                width: 58.3333%;
+            }
+            .mb-lg-0 {
+                margin-bottom: 0;
+            }
+        }
+        @media (max-width: 991px) {
+            .navbar > .container {
+                flex-wrap: wrap;
+            }
+            .navbar-toggler {
+                display: inline-flex;
+            }
+            .navbar-collapse {
+                display: none;
+                width: 100%;
+                flex-basis: 100%;
+                flex-direction: column;
+                align-items: stretch;
+                padding-top: 1rem;
+            }
+            .navbar-collapse.show {
+                display: flex;
+            }
+            .navbar-nav {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 0.25rem;
+                margin-inline: 0;
+            }
+            .nav-link {
+                display: block;
+                padding-block: 0.45rem;
+            }
+            .carousel-control-prev {
+                left: 0;
+            }
+            .carousel-control-next {
+                right: 0;
+            }
         }
     </style>
 </head>
 <body>
 
-<nav class="navbar navbar-expand-lg navbar-custom fixed-top">
+<nav class="navbar navbar-custom fixed-top">
     <div class="container">
         <a class="navbar-brand fw-bold fs-3" href="#" style="color: #0b2b26;">
             <i class="fas fa-university me-2" style="color: #e6b422;"></i>UTech, JA
         </a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
+        <button class="navbar-toggler" type="button" aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
-        <div class="collapse navbar-collapse" id="mainNav">
+        <div class="navbar-collapse" id="mainNav">
             <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
                 <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
                 <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
@@ -290,7 +740,7 @@
         <h2 class="section-title">Transforming industries through applied research</h2>
         <p class="section-sub">Explore UTech-led projects that drive real impact in the Caribbean and globally.</p>
     </div>
-    <div id="innovationCarousel" class="carousel slide mt-4" data-bs-ride="carousel">
+    <div id="innovationCarousel" class="carousel slide mt-4">
         <div class="carousel-inner rounded-4 shadow-lg">
             <div class="carousel-item active">
                 <div class="row g-0 bg-white p-4 align-items-center">
@@ -311,10 +761,10 @@
                 </div>
             </div>
         </div>
-        <button class="carousel-control-prev" type="button" data-bs-target="#innovationCarousel" data-bs-slide="prev">
+        <button class="carousel-control-prev" type="button" data-carousel-direction="prev" aria-label="Previous research project">
             <span class="carousel-control-prev-icon" aria-hidden="true"></span>
         </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#innovationCarousel" data-bs-slide="next">
+        <button class="carousel-control-next" type="button" data-carousel-direction="next" aria-label="Next research project">
             <span class="carousel-control-next-icon" aria-hidden="true"></span>
         </button>
     </div>
@@ -387,55 +837,100 @@
     </div>
 </footer>
 
-<!-- jQuery animations & counters -->
 <script>
-    $(document).ready(function() {
-        function animateCounter(id, start, end, duration) {
-            let range = end - start;
-            let current = start;
-            let increment = end > start ? 1 : -1;
-            let stepTime = Math.abs(Math.floor(duration / range));
-            let timer = setInterval(() => {
-                current += increment;
-                $(id).text(current);
-                if (current == end) clearInterval(timer);
-            }, stepTime);
+    document.addEventListener('DOMContentLoaded', function() {
+        const navToggle = document.querySelector('.navbar-toggler');
+        const mainNav = document.querySelector('#mainNav');
+
+        navToggle.addEventListener('click', function() {
+            const isOpen = mainNav.classList.toggle('show');
+            navToggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+        });
+
+        function animateCounter(selector, start, end, duration) {
+            const element = document.querySelector(selector);
+            const startTime = performance.now();
+
+            function update(now) {
+                const progress = Math.min((now - startTime) / duration, 1);
+                const value = Math.floor(start + (end - start) * progress);
+                element.textContent = value.toLocaleString();
+
+                if (progress < 1) {
+                    requestAnimationFrame(update);
+                }
+            }
+
+            requestAnimationFrame(update);
         }
-        // check on scroll: simple trigger using waypoint-like approach
+
         let counted = false;
-        $(window).on('scroll', function() {
-            let scrollTop = $(window).scrollTop();
-            let statsTop = $('.stat-card').first().offset().top - 500;
-            if (scrollTop > statsTop && !counted) {
+        function startCounters() {
+            const firstStat = document.querySelector('.stat-card');
+            if (!firstStat || counted) return;
+
+            const statsTop = firstStat.getBoundingClientRect().top + window.scrollY - 500;
+            if (window.scrollY > statsTop) {
                 counted = true;
                 animateCounter('#statStudents', 0, 12480, 2000);
                 animateCounter('#statPrograms', 0, 86, 1500);
                 animateCounter('#statPartners', 0, 210, 1500);
                 animateCounter('#statResearch', 0, 12, 1200);
             }
+        }
+
+        window.addEventListener('scroll', startCounters, { passive: true });
+        setTimeout(startCounters, 300);
+
+        const contactForm = document.querySelector('#contactForm');
+        const formMessage = document.querySelector('#formMsg');
+        contactForm.addEventListener('submit', function(event) {
+            event.preventDefault();
+            formMessage.innerHTML = '<i class="fas fa-check-circle"></i> Thanks! Our team will reach out within 24 hours.';
+            formMessage.style.display = 'block';
+            contactForm.reset();
+
+            setTimeout(function() {
+                formMessage.style.display = 'none';
+            }, 3000);
         });
-        // trigger after tiny delay if already visible
-        setTimeout(() => { $(window).trigger('scroll'); }, 300);
-        
-        // Contact form alert (jQuery elegant)
-        $('#contactForm').on('submit', function(e) {
-            e.preventDefault();
-            $('#formMsg').html('<i class="fas fa-check-circle"></i> Thanks! Our team will reach out within 24 hours.');
-            $(this)[0].reset();
-            setTimeout(() => $('#formMsg').fadeOut(2000), 3000);
-        });
-        
-        // smooth scrolling for navigation
-        $('.nav-link, .btn-utech[href="#"]').on('click', function(event) {
-            if (this.hash !== "") {
+
+        document.querySelectorAll('.nav-link').forEach(function(link) {
+            link.addEventListener('click', function(event) {
+                if (!link.hash) return;
+
+                const target = document.querySelector(link.hash);
+                if (!target) return;
+
                 event.preventDefault();
-                let hash = this.hash;
-                $('html, body').animate({ scrollTop: $(hash).offset().top - 70 }, 800);
-            }
+                window.scrollTo({
+                    top: target.getBoundingClientRect().top + window.scrollY - 70,
+                    behavior: 'smooth'
+                });
+                mainNav.classList.remove('show');
+                navToggle.setAttribute('aria-expanded', 'false');
+            });
         });
-        
-        // add dynamic hover polish to cards
-        $('.card-modern').on('mouseenter', function() { $(this).css('transition', '0.2s'); });
+
+        const carousel = document.querySelector('#innovationCarousel');
+        const items = Array.from(carousel.querySelectorAll('.carousel-item'));
+        let activeIndex = items.findIndex(function(item) {
+            return item.classList.contains('active');
+        });
+        if (activeIndex < 0) activeIndex = 0;
+
+        function showSlide(nextIndex) {
+            items[activeIndex].classList.remove('active');
+            activeIndex = (nextIndex + items.length) % items.length;
+            items[activeIndex].classList.add('active');
+        }
+
+        carousel.querySelectorAll('[data-carousel-direction]').forEach(function(button) {
+            button.addEventListener('click', function() {
+                const direction = button.dataset.carouselDirection === 'next' ? 1 : -1;
+                showSlide(activeIndex + direction);
+            });
+        });
     });
 </script>
 </body>
