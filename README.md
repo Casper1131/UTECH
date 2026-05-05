@@ -4,6 +4,7 @@
 This project is a comprehensive redesign of the **University of Technology, Jamaica (UTech)** website. The work moves away from dark, technology-heavy aesthetics to create a bright, welcoming, and academically focused digital presence. The design prioritizes clarity, student success stories, campus life, and intuitive navigation for prospective students, parents, and faculty.
 ## Website
 [https://amazing-klepon-1fde67.netlify.app/]
+
 The visual language combines:
 - **UTech’s brand identity:** Deep greens, gold/warm accents, and clean typography.
 - **UWI Mona’s academic prestige:** Trustworthy layouts, structured information hierarchy, and institutional gravitas.
