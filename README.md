@@ -48,15 +48,6 @@ The Figma library includes:
 
 - Built with **Vanilla CSS** for layout and responsiveness.
 - **Vanilla JS** used for lightweight interactivity (counter animations, form handling, smooth scroll).
-- Color palette defined with CSS custom properties for easy theming.
-- All assets (icons, placeholders) are ready for replacement with final photography and copy.
-
-## Next Steps
-
-1. Review the Figma prototypes with the stakeholder team.
-2. Finalize real student/faculty photography.
-3. Copywriting for program descriptions and admissions pages.
-4. Accessibility audit (color contrast, ARIA labels, keyboard navigation).
 
 ## Team Members
 
